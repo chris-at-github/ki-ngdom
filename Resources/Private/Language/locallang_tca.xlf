@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-01-23T22:18:33Z" product-name="ai">
+		<header/>
+		<body>
+			<trans-unit id="tx_ai_domain_model_map">
+				<source>Map</source>
+			</trans-unit>
+			<trans-unit id="tx_ai_domain_model_map.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_ai_domain_model_mapregion">
+				<source>Map Region</source>
+			</trans-unit>
+			<trans-unit id="tx_ai_domain_model_mapregion.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_ai_domain_model_mapregion.map">
+				<source>Map</source>
+			</trans-unit>
+			<trans-unit id="tx_ai_domain_model_maplocation">
+				<source>Map Location</source>
+			</trans-unit>
+			<trans-unit id="tx_ai_domain_model_maplocation.region">
+				<source>Region</source>
+			</trans-unit>
+			<trans-unit id="tx_ai_domain_model_maplocation.map">
+				<source>Map</source>
+			</trans-unit>
+			<trans-unit id="tx_ai_frontend.name">
+				<source>Frontend</source>
+			</trans-unit>
+			<trans-unit id="tx_ai_frontend.description">
+				<source></source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
