@@ -29,6 +29,28 @@ class MapRegion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $map = null;
 
 	/**
+	 * locations
+	 *
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ai\Domain\Model\MapLocation>
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+	 */
+	protected $locations = null;
+
+	/**
+	 * __construct
+	 */
+	public function __construct() {
+		$this->initStorageObjects();
+	}
+
+	/**
+	 * @return void
+	 */
+	protected function initStorageObjects() {
+		$this->locations = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+	}
+
+	/**
 	 * Returns the title
 	 *
 	 * @return string $title
@@ -67,22 +89,41 @@ class MapRegion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	}
 
 	/**
-	 * __construct
+	 * Adds a MapRegion
+	 *
+	 * @param \Ps\Ai\Domain\Model\MapLocation $location
+	 * @return void
 	 */
-	public function __construct() {
-
-		//Do not remove the next line: It would break the functionality
-		$this->initStorageObjects();
+	public function addLocation(\Ps\Ai\Domain\Model\MapLocation $location) {
+		$this->locations->attach($location);
 	}
 
 	/**
-	 * Initializes all ObjectStorage properties
-	 * Do not modify this method!
-	 * It will be rewritten on each save in the extension builder
-	 * You may modify the constructor of this class instead
+	 * Removes a MapRegion
 	 *
+	 * @param \Ps\Ai\Domain\Model\MapLocation $location The MapRegion to be removed
 	 * @return void
 	 */
-	protected function initStorageObjects() {
+	public function removeLocation(\Ps\Ai\Domain\Model\MapLocation $location) {
+		$this->locations->detach($location);
+	}
+
+	/**
+	 * Returns the regions
+	 *
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ai\Domain\Model\MapLocation> $locations
+	 */
+	public function getLocations() {
+		return $this->locations;
+	}
+
+	/**
+	 * Sets the regions
+	 *
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ai\Domain\Model\MapLocation> $locations
+	 * @return void
+	 */
+	public function setLocations(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $locations) {
+		$this->locations = $locations;
 	}
 }
