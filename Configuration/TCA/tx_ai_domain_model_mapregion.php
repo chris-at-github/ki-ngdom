@@ -24,7 +24,7 @@ return [
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, map',
 	],
 	'types' => [
-		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, map, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, map, locations, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
 	],
 	'columns' => [
 		'sys_language_uid' => [
@@ -137,6 +137,20 @@ return [
 				'maxitems' => 1,
 			],
 		],
-
+		'locations' => [
+			'exclude' => 1,
+			'label' => 'LLL:EXT:ai/Resources/Private/Language/locallang_tca.xlf:tx_ai_domain_model_mapregion.locations',
+			'config' => [
+				'type' => 'inline',
+				'foreign_table' => 'tx_ai_domain_model_maplocation',
+				'foreign_field' => 'region',
+//				'foreign_table_field' => 'parenttable',
+				'maxitems' => 100,
+				'appearance' => [
+					'collapseAll' => 1,
+					'expandSingle' => 1,
+				],
+			],
+		],
 	],
 ];

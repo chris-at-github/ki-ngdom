@@ -13,6 +13,7 @@ CREATE TABLE tx_ai_domain_model_map (
 CREATE TABLE tx_ai_domain_model_mapregion (
 
 	title varchar(255) DEFAULT '' NOT NULL,
+    locations int(11) unsigned DEFAULT '0',
 	map int(11) unsigned DEFAULT '0',
 
 );
