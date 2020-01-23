@@ -4,6 +4,7 @@
 CREATE TABLE tx_ai_domain_model_map (
 
 	title varchar(255) DEFAULT '' NOT NULL,
+    regions int(11) unsigned DEFAULT '0',
 
 );
 

@@ -144,7 +144,6 @@ return [
 				'type' => 'inline',
 				'foreign_table' => 'tx_ai_domain_model_maplocation',
 				'foreign_field' => 'region',
-//				'foreign_table_field' => 'parenttable',
 				'maxitems' => 100,
 				'appearance' => [
 					'collapseAll' => 1,

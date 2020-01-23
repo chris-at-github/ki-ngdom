@@ -9,6 +9,9 @@
 			<trans-unit id="tx_ai_domain_model_map.title">
 				<source>Title</source>
 			</trans-unit>
+			<trans-unit id="tx_ai_domain_model_map.regions">
+				<source>Regions</source>
+			</trans-unit>
 			<trans-unit id="tx_ai_domain_model_mapregion">
 				<source>Map Region</source>
 			</trans-unit>
@@ -17,6 +20,9 @@
 			</trans-unit>
 			<trans-unit id="tx_ai_domain_model_mapregion.map">
 				<source>Map</source>
+			</trans-unit>
+			<trans-unit id="tx_ai_domain_model_mapregion.locations">
+				<source>Locations</source>
 			</trans-unit>
 			<trans-unit id="tx_ai_domain_model_maplocation">
 				<source>Map Location</source>

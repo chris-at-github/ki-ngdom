@@ -26,6 +26,28 @@ class Map extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $title = '';
 
 	/**
+	 * regions
+	 *
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ai\Domain\Model\MapRegion>
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+	 */
+	protected $regions = null;
+
+	/**
+	 * __construct
+	 */
+	public function __construct() {
+		$this->initStorageObjects();
+	}
+
+	/**
+	 * @return void
+	 */
+	protected function initStorageObjects() {
+		$this->regions = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+	}
+
+	/**
 	 * Returns the title
 	 *
 	 * @return string $title
@@ -42,5 +64,44 @@ class Map extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	public function setTitle($title) {
 		$this->title = $title;
+	}
+
+	/**
+	 * Adds a MapRegion
+	 *
+	 * @param \Ps\Ai\Domain\Model\MapRegion $region
+	 * @return void
+	 */
+	public function addRegion(\Ps\Ai\Domain\Model\MapRegion $region) {
+		$this->regions->attach($region);
+	}
+
+	/**
+	 * Removes a MapRegion
+	 *
+	 * @param \Ps\Ai\Domain\Model\MapRegion $region The MapRegion to be removed
+	 * @return void
+	 */
+	public function removeRegion(\Ps\Ai\Domain\Model\MapRegion $region) {
+		$this->regions->detach($region);
+	}
+
+	/**
+	 * Returns the regions
+	 *
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ai\Domain\Model\MapRegion> $regions
+	 */
+	public function getRegions() {
+		return $this->regions;
+	}
+
+	/**
+	 * Sets the regions
+	 *
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ai\Domain\Model\MapRegion> $regions
+	 * @return void
+	 */
+	public function setRegions(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $regions) {
+		$this->regions = $regions;
 	}
 }

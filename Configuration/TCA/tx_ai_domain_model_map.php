@@ -21,10 +21,10 @@ return [
 		'iconfile' => 'EXT:ai/Resources/Public/Icons/tx_ai_domain_model_map.gif'
 	],
 	'interface' => [
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, regions',
 	],
 	'types' => [
-		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, regions, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
 	],
 	'columns' => [
 		'sys_language_uid' => [
@@ -126,6 +126,19 @@ return [
 				'eval' => 'trim'
 			],
 		],
-
+		'regions' => [
+			'exclude' => 1,
+			'label' => 'LLL:EXT:ai/Resources/Private/Language/locallang_tca.xlf:tx_ai_domain_model_map.regions',
+			'config' => [
+				'type' => 'inline',
+				'foreign_table' => 'tx_ai_domain_model_mapregion',
+				'foreign_field' => 'map',
+				'maxitems' => 100,
+				'appearance' => [
+					'collapseAll' => 1,
+					'expandSingle' => 1,
+				],
+			],
+		],
 	],
 ];
