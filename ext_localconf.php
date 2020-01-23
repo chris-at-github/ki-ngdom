@@ -5,10 +5,14 @@ call_user_func(function() {
 	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
 		'Ps.Ai',
 		'Frontend',
-		[],
+		[
+			'Game' => 'index'
+		],
 
 		// non-cacheable actions
-		[]
+		[
+			'Game' => 'index'
+		]
 	);
 
 	// wizards
@@ -18,8 +22,8 @@ call_user_func(function() {
 				elements {
 					frontend {
 						iconIdentifier = ai-plugin-frontend
-						title = LLL:EXT:ai/Resources/Private/Language/locallang_db.xlf:tx_ai_frontend.name
-						description = LLL:EXT:ai/Resources/Private/Language/locallang_db.xlf:tx_ai_frontend.description
+						title = LLL:EXT:ai/Resources/Private/Language/locallang_tca.xlf:tx_ai_frontend.name
+						description = LLL:EXT:ai/Resources/Private/Language/locallang_tca.xlf:tx_ai_frontend.description
 						tt_content_defValues {
 							CType = list
 							list_type = ai_frontend
