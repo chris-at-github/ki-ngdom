@@ -12,12 +12,6 @@ class GameController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	 * @return void
 	 */
 	public function indexAction() {
-
-		/** @var Map $map */
-		$map = $this->objectManager->get(MapRepository::class)->findByUid(1);
-
-		DebuggerUtility::var_dump($map);
-
-		return true;
+		$this->view->assign('maps', $this->objectManager->get(MapRepository::class)->findAll());
 	}
 }
