@@ -14,4 +14,12 @@ class GameController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	public function indexAction() {
 		$this->view->assign('maps', $this->objectManager->get(MapRepository::class)->findAll());
 	}
+
+	/**
+	 * @param \Ps\Ai\Domain\Model\Game $game
+	 * @return void
+	 */
+	public function createAction(\Ps\Ai\Domain\Model\Game $game) {
+
+	}
 }
