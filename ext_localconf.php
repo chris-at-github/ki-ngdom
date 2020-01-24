@@ -6,12 +6,12 @@ call_user_func(function() {
 		'Ps.Ai',
 		'Frontend',
 		[
-			'Game' => 'index'
+			'Game' => 'index, create'
 		],
 
 		// non-cacheable actions
 		[
-			'Game' => 'index'
+			'Game' => 'index, create'
 		]
 	);
 
