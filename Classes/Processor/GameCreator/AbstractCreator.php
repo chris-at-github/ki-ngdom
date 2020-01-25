@@ -3,6 +3,7 @@
 namespace Ps\Ai\Processor\GameCreator;
 
 use Ps\Ai\Domain\Model\Game;
+use TYPO3\CMS\Extbase\Object\ObjectManager;
 
 /***
  *
@@ -16,6 +17,12 @@ use Ps\Ai\Domain\Model\Game;
  ***/
 
 abstract class AbstractCreator {
+
+	/**
+	 * @TYPO3\CMS\Extbase\Annotation\Inject
+	 * @var \TYPO3\CMS\Extbase\Object\ObjectManager
+	 */
+	protected $objectManager;
 
 	/**
 	 * @param \Ps\Ai\Domain\Model\Game $game

@@ -3,6 +3,9 @@
 namespace Ps\Ai\Processor\GameCreator;
 
 use Ps\Ai\Domain\Model\Game;
+use Ps\Ai\Domain\Model\GameMapRegion;
+use Ps\Ai\Domain\Model\GameMapLocation;
+use Ps\Ai\Domain\Repository\GameRepository;
 use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 /***
@@ -29,15 +32,20 @@ class MapCreator extends AbstractCreator {
 		/** @var \Ps\Ai\Domain\Model\MapRegion $region */
 		foreach($game->getMap()->getRegions() as $region) {
 			
-			// new GameMapRegion
+			/** @var \Ps\Ai\Domain\Model\GameMapRegion $gameMapRegion */
+			$gameMapRegion = $this->objectManager->get(GameMapRegion::class); 
 
 			/** @var \Ps\Ai\Domain\Model\MapLocation $location */
 			foreach($region->getLocations() as $location) {
 
-				// new GameMapLocation
-				// gameMapRegion->attachLocation(gameMapLocation)
+				/** @var \Ps\Ai\Domain\Model\GameMapLocation $gameMapLocation */
+				$gameMapLocation = $this->objectManager->get(GameMapLocation::class);
+				$gameMapLocation->setOrigin($location);
+
+				$gameMapRegion->addLocation($gameMapLocation);
 			}
-			// game->regions->attach
+
+			$game->addRegion($gameMapRegion);
 		}
 	}
 }
