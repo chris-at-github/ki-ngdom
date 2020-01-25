@@ -19,9 +19,19 @@ class GameController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 
 	/**
 	 * @param \Ps\Ai\Domain\Model\Game $game
+	 * @param array $options
 	 * @return void
 	 */
-	public function createAction(Game $game) {
+	public function createAction(Game $game, $options = []) {
 		$this->objectManager->get(GameRepository::class)->add($game);
+
+		foreach([
+			\Ps\Ai\Processor\GameCreator\MapCreator::class
+		] as $fqcn) {
+
+			/** @var \Ps\Ai\Processor\GameCreator\AbstractCreator $gameCreator */
+			$gameCreator = $this->objectManager->get($fqcn);
+			$gameCreator->create($game, $options);
+		}
 	}
 }
