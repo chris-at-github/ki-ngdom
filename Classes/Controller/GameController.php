@@ -15,7 +15,6 @@ class GameController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	 */
 	public function indexAction() {
 		$this->view->assign('maps', $this->objectManager->get(MapRepository::class)->findAll());
-		//DebuggerUtility::var_dump($this->objectManager->get(GameRepository::class)->findByUid(3));
 	}
 
 	/**
@@ -34,5 +33,7 @@ class GameController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 			$gameCreator = $this->objectManager->get($fqcn);
 			$gameCreator->create($game, $options);
 		}
+
+		$this->redirect('index');
 	}
 }
