@@ -4,6 +4,7 @@ namespace Ps\Ai\Controller;
 
 use Ps\Ai\Domain\Model\Game;
 use Ps\Ai\Domain\Model\Map;
+use Ps\Ai\Domain\Repository\GameRepository;
 use Ps\Ai\Domain\Repository\MapRepository;
 use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
@@ -21,6 +22,6 @@ class GameController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	 * @return void
 	 */
 	public function createAction(Game $game) {
-		DebuggerUtility::var_dump($game);
+		$this->objectManager->get(GameRepository::class)->add($game);
 	}
 }
