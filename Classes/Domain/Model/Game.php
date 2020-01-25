@@ -30,6 +30,28 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $map = null;
 
 	/**
+	 * regions
+	 *
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ai\Domain\Model\GameMapRegion>
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+	 */
+	protected $regions = null;
+
+	/**
+	 * __construct
+	 */
+	public function __construct()	{
+		$this->initStorageObjects();
+	}
+
+	/**
+	 * @return void
+	 */
+	protected function initStorageObjects()	{
+		$this->regions = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+	}
+
+	/**
 	 * Returns the title
 	 * 
 	 * @return string $title
@@ -65,5 +87,44 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	public function setMap(\Ps\Ai\Domain\Model\Map $map) {
 		$this->map = $map;
+	}
+
+	/**
+	 * Adds a MapRegion
+	 *
+	 * @param \Ps\Ai\Domain\Model\GameMapRegion $region
+	 * @return void
+	 */
+	public function addRegion(\Ps\Ai\Domain\Model\GameMapRegion $region) {
+		$this->regions->attach($region);
+	}
+
+	/**
+	 * Removes a MapRegion
+	 *
+	 * @param \Ps\Ai\Domain\Model\GameMapRegion $region The MapRegion to be removed
+	 * @return void
+	 */
+	public function removeRegion(\Ps\Ai\Domain\Model\GameMapRegion $region)	{
+		$this->regions->detach($region);
+	}
+
+	/**
+	 * Returns the regions
+	 *
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ai\Domain\Model\GameMapRegion> $regions
+	 */
+	public function getRegions() {
+		return $this->regions;
+	}
+
+	/**
+	 * Sets the regions
+	 *
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ai\Domain\Model\GameMapRegion> $regions
+	 * @return void
+	 */
+	public function setRegions(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $regions) {
+		$this->regions = $regions;
 	}
 }
