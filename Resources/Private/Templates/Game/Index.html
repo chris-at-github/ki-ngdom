@@ -2,6 +2,7 @@
 <f:layout name="Default" />
 	<f:section name="Main">
 		<f:render section="Wizard" arguments="{_all}" />
+		<f:render section="Listing" arguments="{_all}" />
 	</f:section>
 
 	<f:section name="Wizard">
@@ -22,5 +23,15 @@
 			</div>
 
 		</f:form>
+	</f:section>
+
+	<f:section name="Listing">
+		<ul>
+			<f:for each="{games}" as="game">
+				<li>
+					<f:link.action action="playground" arguments="{game: game}">{game.title}</f:link.action>
+				</li>
+			</f:for>
+		</ul>
 	</f:section>
 </html>

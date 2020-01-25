@@ -14,6 +14,7 @@ class GameController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	 * @return void
 	 */
 	public function indexAction() {
+		$this->view->assign('games', $this->objectManager->get(GameRepository::class)->findAll());
 		$this->view->assign('maps', $this->objectManager->get(MapRepository::class)->findAll());
 	}
 
@@ -35,5 +36,13 @@ class GameController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		}
 
 		$this->redirect('index');
+	}
+
+	/**
+	 * @param \Ps\Ai\Domain\Model\Game $game
+	 * @return void
+	 */
+	public function playgroundAction(Game $game) {
+		DebuggerUtility::var_dump($game);
 	}
 }

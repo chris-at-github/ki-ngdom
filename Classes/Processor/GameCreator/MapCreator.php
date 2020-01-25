@@ -33,7 +33,8 @@ class MapCreator extends AbstractCreator {
 		foreach($game->getMap()->getRegions() as $region) {
 			
 			/** @var \Ps\Ai\Domain\Model\GameMapRegion $gameMapRegion */
-			$gameMapRegion = $this->objectManager->get(GameMapRegion::class); 
+			$gameMapRegion = $this->objectManager->get(GameMapRegion::class);
+			$gameMapRegion->setOrigin($region);
 
 			/** @var \Ps\Ai\Domain\Model\MapLocation $location */
 			foreach($region->getLocations() as $location) {
