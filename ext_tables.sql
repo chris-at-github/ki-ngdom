@@ -38,3 +38,24 @@ CREATE TABLE tx_ai_domain_model_game (
 	map int(11) unsigned DEFAULT '0',
 
 );
+
+#
+# Table structure for table 'tx_ai_domain_model_gamemapregion'
+#
+CREATE TABLE tx_ai_domain_model_gamemapregion (
+
+    origin int(11) unsigned DEFAULT '0',
+    game   int(11) unsigned DEFAULT '0',
+
+);
+
+#
+# Table structure for table 'tx_ai_domain_model_gamemaplocation'
+#
+CREATE TABLE tx_ai_domain_model_gamemaplocation (
+
+    region int(11) unsigned DEFAULT '0',
+    origin int(11) unsigned DEFAULT '0',
+
+);
+
