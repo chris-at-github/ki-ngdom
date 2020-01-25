@@ -24,6 +24,20 @@ class MapCreator extends AbstractCreator {
 	 * @return void
 	 */
 	public function create(Game $game, $options) {
-		DebuggerUtility::var_dump($game, 'MapCreator');
+	
+		// Durchlaufe alle Regionen der Karte und fuege sie dem Spiel hinzu
+		/** @var \Ps\Ai\Domain\Model\MapRegion $region */
+		foreach($game->getMap()->getRegions() as $region) {
+			
+			// new GameMapRegion
+
+			/** @var \Ps\Ai\Domain\Model\MapLocation $location */
+			foreach($region->getLocations() as $location) {
+
+				// new GameMapLocation
+				// gameMapRegion->attachLocation(gameMapLocation)
+			}
+			// game->regions->attach
+		}
 	}
 }
