@@ -11,6 +11,11 @@
 				<label class="form-label" for="game-wizard-title">Title</label>
 				<f:form.textfield property="title" class="form-field" id="game-wizard-title" />
 			</div>
+
+			<div class="form-item">
+				<label class="form-label" for="game-wizard-map">Map</label>
+				<f:form.select property="map" class="form-field" id="game-wizard-map" options="{maps}" optionLabelField="title" prependOptionValue="0" prependOptionLabel="" />
+			</div>
 			
 			<div class="form-actions">
 				<button class="form-button" type="submit">Create</button>
