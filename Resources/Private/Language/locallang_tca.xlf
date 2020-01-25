@@ -48,7 +48,7 @@
 			<trans-unit id="tx_ai_domain_model_game.map">
 				<source>Map</source>
 			</trans-unit>
-			<trans-unit id="tx_aix_domain_model_gamemapregion">
+			<trans-unit id="tx_ai_domain_model_gamemapregion">
 				<source>Game Map Region</source>
 			</trans-unit>
 			<trans-unit id="tx_ai_domain_model_gamemapregion.origin">
