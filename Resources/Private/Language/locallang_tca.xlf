@@ -51,6 +51,9 @@
 			<trans-unit id="tx_ai_domain_model_game.regions">
 				<source>Regions</source>
 			</trans-unit>
+			<trans-unit id="tx_ai_domain_model_game.players">
+				<source>Players</source>
+			</trans-unit>			
 			<trans-unit id="tx_ai_domain_model_gamemapregion">
 				<source>Game Map Region</source>
 			</trans-unit>
@@ -71,6 +74,12 @@
 			</trans-unit>
 			<trans-unit id="tx_ai_domain_model_gamemaplocation.origin">
 				<source>Origin</source>
+			</trans-unit>
+			<trans-unit id="tx_ai_domain_model_gameplayer">
+				<source>Game Player</source>
+			</trans-unit>
+			<trans-unit id="tx_ai_domain_model_gameplayer.title">
+				<source>Title</source>
 			</trans-unit>
 		</body>
 	</file>
