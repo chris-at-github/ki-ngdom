@@ -43,6 +43,6 @@ class GameController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	 * @return void
 	 */
 	public function playgroundAction(Game $game) {
-		DebuggerUtility::var_dump($game);
+		$this->view->assign('game', $game);
 	}
 }
