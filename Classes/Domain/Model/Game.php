@@ -38,6 +38,14 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $regions = null;
 
 	/**
+	 * regions
+	 *
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ai\Domain\Model\GamePlayer>
+	 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+	 */
+	protected $players = null;
+
+	/**
 	 * __construct
 	 */
 	public function __construct()	{
@@ -49,6 +57,7 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	protected function initStorageObjects()	{
 		$this->regions = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->players = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	}
 
 	/**
@@ -126,5 +135,36 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	public function setRegions(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $regions) {
 		$this->regions = $regions;
+	}
+
+	/**
+	 * @param \Ps\Ai\Domain\Model\GamePlayer $player
+	 * @return void
+	 */
+	public function addPlayer(\Ps\Ai\Domain\Model\GamePlayer $player) {
+		$this->players->attach($player);
+	}
+
+	/**
+	 * @param \Ps\Ai\Domain\Model\GamePlayer $player
+	 * @return void
+	 */
+	public function removePlayer(\Ps\Ai\Domain\Model\GamePlayer $player) {
+		$this->players->detach($player);
+	}
+
+	/**
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ai\Domain\Model\GamePlayer> $players
+	 */
+	public function getPlayers() {
+		return $this->players;
+	}
+
+	/**
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ai\Domain\Model\GamePlayer> $players
+	 * @return void
+	 */
+	public function setPlayers(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $players) {
+		$this->players = $players;
 	}
 }
