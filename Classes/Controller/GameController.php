@@ -27,7 +27,8 @@ class GameController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		$this->objectManager->get(GameRepository::class)->add($game);
 
 		foreach([
-			\Ps\Ai\Processor\GameCreator\MapCreator::class
+			\Ps\Ai\Processor\GameCreator\MapCreator::class,
+			\Ps\Ai\Processor\GameCreator\PlayerCreator::class
 		] as $fqcn) {
 
 			/** @var \Ps\Ai\Processor\GameCreator\AbstractCreator $gameCreator */
@@ -44,5 +45,7 @@ class GameController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	 */
 	public function playgroundAction(Game $game) {
 		$this->view->assign('game', $game);
+
+		DebuggerUtility::var_dump($game);
 	}
 }
