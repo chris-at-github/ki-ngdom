@@ -6,6 +6,7 @@ use Ps\Ai\Domain\Model\Game;
 use Ps\Ai\Domain\Model\Map;
 use Ps\Ai\Domain\Repository\GameRepository;
 use Ps\Ai\Domain\Repository\MapRepository;
+use Ps\Ai\Processor\Queue\SettlementProcessor;
 use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 class GameController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
@@ -45,7 +46,10 @@ class GameController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	 */
 	public function playgroundAction(Game $game) {
 		$this->view->assign('game', $game);
+		$this->view->assign('queueProcessors', [
+			SettlementProcessor::class
+		]);
 
-		DebuggerUtility::var_dump($game);
+		// DebuggerUtility::var_dump($game);
 	}
 }

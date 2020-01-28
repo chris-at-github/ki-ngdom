@@ -1,14 +1,37 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="Default" />
-<f:section name="Main">
-	<f:render section="Map" arguments="{_all}" />
-</f:section>
 
-<f:section name="Map">
-	<f:for each="{game.regions}" as="region">
-		<div>
-			<header>{region.origin.title}</header>
-		</div>
-	</f:for>
-</f:section>
+	<f:section name="Main">
+		<f:render section="Map" arguments="{_all}" />
+		<f:render section="Queue" arguments="{_all}" />
+	</f:section>
+
+	<f:section name="Map">
+		<f:for each="{game.regions}" as="region">
+			<div>
+				<header>{region.origin.title}</header>
+			</div>
+		</f:for>
+	</f:section>
+
+	<f:section name="Queue">
+		<f:form controller="Queue" action="wizard">
+			<div>
+				<f:form.hidden name="game" value="{game}" />
+			</div>
+
+			<div class="form-item">
+				<label class="form-label" for="queue-wizard-processor">Queue Processor</label>
+				<f:form.select name="processor" class="form-field" id="queue-wizard-processor">
+					<f:for each="{queueProcessors}" as="queueProcessor">
+						<f:form.select.option value="{queueProcessor}">{queueProcessor}</f:form.select.option>
+					</f:for> 
+				</f:form.select>
+			</div>
+
+			<div class="form-actions">
+				<button class="form-button" type="submit">Create</button>
+			</div>
+		</f:form>
+	</f:section>
 </html>
