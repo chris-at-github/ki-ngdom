@@ -6,12 +6,14 @@ call_user_func(function() {
 		'Ps.Ai',
 		'Frontend',
 		[
-			'Game' => 'index, create, playground'
+			'Game' => 'index, create, playground',
+			'Queue' => 'wizard, create',
 		],
 
 		// non-cacheable actions
 		[
-			'Game' => 'index, create, playground'
+			'Game' => 'index, create, playground',
+			'Queue' => 'wizard, create',
 		]
 	);
 
@@ -41,5 +43,5 @@ call_user_func(function() {
 		\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
 		['source' => 'EXT:ai/Resources/Public/Icons/user_plugin_frontend.svg']
 	);
-		
+
 });

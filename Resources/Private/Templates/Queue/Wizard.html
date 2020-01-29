@@ -1,0 +1,19 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+	<f:section name="Main">
+
+		<f:form action="create">
+			<div>
+				<f:form.hidden value="{game}" name="game" />
+				<f:form.hidden value="{processor}" name="processor" />
+			</div>
+
+			<f:render partial="Queue/Processor/{partial}" section="Main" arguments="{_all}" />
+
+			<div class="form-action">
+				<button class="form-button" type="submit">Create</button>
+			</div>
+		</f:form>
+
+	</f:section>
+</html>
