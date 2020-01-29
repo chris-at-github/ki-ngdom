@@ -53,7 +53,7 @@
 			</trans-unit>
 			<trans-unit id="tx_ai_domain_model_game.players">
 				<source>Players</source>
-			</trans-unit>			
+			</trans-unit>
 			<trans-unit id="tx_ai_domain_model_gamemapregion">
 				<source>Game Map Region</source>
 			</trans-unit>
@@ -80,6 +80,21 @@
 			</trans-unit>
 			<trans-unit id="tx_ai_domain_model_gameplayer.title">
 				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_ai_domain_model_queue">
+				<source>Queue</source>
+			</trans-unit>
+			<trans-unit id="tx_ai_domain_model_queue.processor">
+				<source>Processor</source>
+			</trans-unit>
+			<trans-unit id="tx_ai_domain_model_queue.expiry_date">
+				<source>Expiry Date</source>
+			</trans-unit>
+			<trans-unit id="tx_ai_domain_model_queue.arguments">
+				<source>Arguments</source>
+			</trans-unit>
+			<trans-unit id="tx_ai_domain_model_queue.game">
+				<source>Game</source>
 			</trans-unit>
 		</body>
 	</file>

@@ -71,3 +71,15 @@ CREATE TABLE tx_ai_domain_model_gameplayer (
 	game int(11) unsigned DEFAULT '0',
 
 );
+
+#
+# Table structure for table 'tx_ai_domain_model_queue'
+#
+CREATE TABLE tx_ai_domain_model_queue (
+
+	processor varchar(255) DEFAULT '' NOT NULL,
+	expiry_date int(11) DEFAULT '0' NOT NULL,
+	arguments text,
+	game int(11) unsigned DEFAULT '0',
+
+);
