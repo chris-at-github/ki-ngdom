@@ -12,11 +12,10 @@ class QueueController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 	 * @return void
 	 */
 	public function wizardAction($processor, \Ps\Ai\Domain\Model\Game $game) {
-		DebuggerUtility::var_dump($processor);
-		DebuggerUtility::var_dump($game);
+		$partial = trim(str_replace(['Ps\Ai\Processor\Queue\\', 'Processor'], null, $processor));
 
 		$this->view->assign('game', $game);
 		$this->view->assign('processor', $processor);
-		$this->view->assign('partial', 'Settlement');
+		$this->view->assign('partial', $partial);
 	}
 }
