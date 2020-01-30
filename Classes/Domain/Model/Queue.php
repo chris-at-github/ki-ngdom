@@ -94,10 +94,14 @@ class Queue extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the arguments
 	 *
-	 * @param string $arguments
+	 * @param string|array $arguments
 	 * @return void
 	 */
 	public function setArguments($arguments) {
+		if(is_array($arguments) === true) {
+			$arguments = json_encode($arguments);
+		}
+
 		$this->arguments = $arguments;
 	}
 
@@ -116,7 +120,7 @@ class Queue extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param \Ps\Ai\Domain\Model\Game $game
 	 * @return void
 	 */
-	public function setGame(\Ps\Aix\Domain\Model\Game $game) {
+	public function setGame(\Ps\Ai\Domain\Model\Game $game) {
 		$this->game = $game;
 	}
 }

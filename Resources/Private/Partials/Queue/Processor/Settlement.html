@@ -1,6 +1,17 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 	<f:layout name="Default" />
 	<f:section name="Main">
-		Queue::Settlement
+
+		<div class="form-item">
+			<label class="form-label" for="queue-wizard-map-location">Map location</label>
+			<f:form.select name="arguments[gameMapLocation]" class="form-field" id="queue-wizard-map-location">
+				<f:for each="{game.regions}" as="region">
+					<f:for each="{region.locations}" as="location">
+						<f:form.select.option value="{location.uid}">#{location.uid} ({region.origin.title})</f:form.select.option>
+					</f:for>
+				</f:for>
+			</f:form.select>
+		</div>
+
 	</f:section>
 </html>
