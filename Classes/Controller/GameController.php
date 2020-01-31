@@ -6,6 +6,7 @@ use Ps\Ki\Domain\Model\Game;
 use Ps\Ki\Domain\Model\Map;
 use Ps\Ki\Domain\Repository\GameRepository;
 use Ps\Ki\Domain\Repository\MapRepository;
+use Ps\Ki\Domain\Repository\QueueRepository;
 use Ps\Ki\Processor\Queue\SettlementProcessor;
 use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
@@ -49,6 +50,7 @@ class GameController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		$this->view->assign('queueProcessors', [
 			SettlementProcessor::class
 		]);
+		$this->view->assign('queue', $this->objectManager->get(QueueRepository::class)->findAll());
 
 		// DebuggerUtility::var_dump($game);
 	}

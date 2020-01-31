@@ -20,4 +20,12 @@ class QueueRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 	 * @var array
 	 */
 	protected $defaultOrderings = ['sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING];
+
+	/**
+	 * @param array $options
+	 * @return QueryResultInterface|array
+	 */
+	public function findAll($options = []) {
+		return $this->createQuery()->execute();
+	}
 }
