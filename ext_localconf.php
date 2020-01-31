@@ -3,7 +3,7 @@ defined('TYPO3_MODE') || die('Access denied.');
 
 call_user_func(function() {
 	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-		'Ps.Ai',
+		'Ps.Ki',
 		'Frontend',
 		[
 			'Game' => 'index, create, playground',
@@ -23,12 +23,12 @@ call_user_func(function() {
 			wizards.newContentElement.wizardItems.plugins {
 				elements {
 					frontend {
-						iconIdentifier = ai-plugin-frontend
-						title = LLL:EXT:ai/Resources/Private/Language/locallang_tca.xlf:tx_ai_frontend.name
-						description = LLL:EXT:ai/Resources/Private/Language/locallang_tca.xlf:tx_ai_frontend.description
+						iconIdentifier = ki-plugin-frontend
+						title = LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_frontend.name
+						description = LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_frontend.description
 						tt_content_defValues {
 							CType = list
-							list_type = ai_frontend
+							list_type = ki_frontend
 						}
 					}
 				}
@@ -39,9 +39,9 @@ call_user_func(function() {
 
 	$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
 	$iconRegistry->registerIcon(
-		'ai-plugin-frontend',
+		'ki-plugin-frontend',
 		\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-		['source' => 'EXT:ai/Resources/Public/Icons/user_plugin_frontend.svg']
+		['source' => 'EXT:ki/Resources/Public/Icons/user_plugin_frontend.svg']
 	);
 
 });

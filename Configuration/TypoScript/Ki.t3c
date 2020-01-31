@@ -1,6 +1,6 @@
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ai/Configuration/TypoScript/" extensions="t3c">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ki/Configuration/TypoScript/" extensions="t3c">
 
-plugin.tx_ai {
+plugin.tx_ki {
 	view {
 		# cat=plugin.ai/file; type=string; label=Path to template root (FE)
 		templateRootPath = EXT:ai/Resources/Private/Templates/

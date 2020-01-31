@@ -1,7 +1,7 @@
 <?php
 
 $EM_CONF[$_EXTKEY] = [
-	'title' => 'Ai',
+	'title' => 'Ki-ngdom',
 	'description' => '',
 	'category' => 'plugin',
 	'author' => 'Christian Pschorr',
@@ -20,7 +20,7 @@ $EM_CONF[$_EXTKEY] = [
 	],
 	'autoload' => [
 		'psr-4' => [
-			'Ps\\Ai\\' => 'Classes',
+			'Ps\\Ki\\' => 'Classes',
 		],
 	],
 ];

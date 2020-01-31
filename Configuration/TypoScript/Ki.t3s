@@ -1,0 +1,11 @@
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ki/Configuration/TypoScript/System/" extensions="t3s">
+
+page {
+	includeCSS {
+#		ai = assets/css/empire.css
+	}
+
+	includeJSFooter {
+#		ai = assets/js/empire.js
+	}
+}
