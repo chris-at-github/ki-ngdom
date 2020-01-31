@@ -2,36 +2,58 @@
 <f:layout name="Default" />
 
 	<f:section name="Main">
-		<f:render section="Map" arguments="{_all}" />
-		<f:render section="Queue" arguments="{_all}" />
+		<div class="module">
+			<div class="row">
+				<div class="col-sx-12 col-sm-6">
+					<f:render section="Map" arguments="{_all}" />
+				</div>
+				<div class="col-sx-12 col-sm-6">
+					<f:render section="Queue" arguments="{_all}" />
+				</div>
+			</div>
+		</div>
 	</f:section>
 
 	<f:section name="Map">
-		<f:for each="{game.regions}" as="region">
-			<div>
-				<header>{region.origin.title}</header>
+		<div class="container">
+			<div class="container--header">
+				<div class="container--header-title">Regions</div>
 			</div>
-		</f:for>
+
+			<f:for each="{game.regions}" as="region">
+				<div class="container">
+					<header>{region.origin.title}</header>
+				</div>
+			</f:for>
+		</div>
 	</f:section>
 
 	<f:section name="Queue">
-		<f:form controller="Queue" action="wizard">
-			<div>
-				<f:form.hidden name="game" value="{game}" />
+		<div class="container">
+			<div class="container--header">
+				<div class="container--header-title">Queue</div>
 			</div>
 
-			<div class="form-item">
-				<label class="form-label" for="queue-wizard-processor">Queue Processor</label>
-				<f:form.select name="processor" class="form-field" id="queue-wizard-processor">
-					<f:for each="{queueProcessors}" as="queueProcessor">
-						<f:form.select.option value="{queueProcessor}">{queueProcessor}</f:form.select.option>
-					</f:for> 
-				</f:form.select>
-			</div>
+			<div class="container">
+				<f:form controller="Queue" action="wizard">
+					<div>
+						<f:form.hidden name="game" value="{game}" />
+					</div>
 
-			<div class="form-actions">
-				<button class="form-button" type="submit">Create</button>
-			</div>
-		</f:form>
+					<div class="form-item">
+						<label class="form-label" for="queue-wizard-processor">Queue Processor</label>
+						<f:form.select name="processor" class="form-field" id="queue-wizard-processor">
+							<f:for each="{queueProcessors}" as="queueProcessor">
+								<f:form.select.option value="{queueProcessor}">{queueProcessor}</f:form.select.option>
+							</f:for>
+						</f:form.select>
+					</div>
+
+					<div class="form-action">
+						<button class="form-button" type="submit">Create</button>
+					</div>
+				</f:form>
+				</div>
+		</div>
 	</f:section>
 </html>

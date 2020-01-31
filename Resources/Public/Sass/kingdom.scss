@@ -18,5 +18,10 @@
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Layout
-@import 'kingdom/layout';
-@import 'kingdom/fluid-styled-content';
+@import 'kingdom/layout/page';
+@import 'kingdom/layout/fluid-styled-content';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Components
+@import 'kingdom/components/module';
+@import 'kingdom/components/container';

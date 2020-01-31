@@ -1,0 +1,13 @@
+.container {
+	.container--header-title {
+		font-size: rem(20px);
+	}
+
+	.container {
+		& {
+			margin: rem(10px 0 0 0);
+			padding: rem(5px 10px);
+			background: #fff;
+		}
+	}
+}
