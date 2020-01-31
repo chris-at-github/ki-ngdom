@@ -50,7 +50,9 @@ class GameController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		$this->view->assign('queueProcessors', [
 			SettlementProcessor::class
 		]);
-		$this->view->assign('queue', $this->objectManager->get(QueueRepository::class)->findAll());
+		$this->view->assign('queue', $this->objectManager->get(QueueRepository::class)->findAll([
+			'game' => $game
+		]));
 
 		// DebuggerUtility::var_dump($game);
 	}

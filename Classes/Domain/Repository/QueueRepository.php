@@ -26,6 +26,17 @@ class QueueRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 	 * @return QueryResultInterface|array
 	 */
 	public function findAll($options = []) {
-		return $this->createQuery()->execute();
+		$query = $this->createQuery();
+		$matches = [];
+
+		if(isset($options['game']) === true) {
+			$matches[] = $query->equals('game', $options['game']);
+		}
+
+		if(empty($matches) === false) {
+			$query->matching($query->logicalAnd($matches));
+		}
+
+		return $query->execute();
 	}
 }
