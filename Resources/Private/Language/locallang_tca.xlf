@@ -1,99 +1,99 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2020-01-23T22:18:33Z" product-name="ai">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-01-23T22:18:33Z" product-name="ki">
 		<header/>
 		<body>
-			<trans-unit id="tx_ai_domain_model_map">
+			<trans-unit id="tx_ki_domain_model_map">
 				<source>Map</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_map.title">
+			<trans-unit id="tx_ki_domain_model_map.title">
 				<source>Title</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_map.regions">
+			<trans-unit id="tx_ki_domain_model_map.regions">
 				<source>Regions</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_mapregion">
+			<trans-unit id="tx_ki_domain_model_mapregion">
 				<source>Map Region</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_mapregion.title">
+			<trans-unit id="tx_ki_domain_model_mapregion.title">
 				<source>Title</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_mapregion.map">
+			<trans-unit id="tx_ki_domain_model_mapregion.map">
 				<source>Map</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_mapregion.locations">
+			<trans-unit id="tx_ki_domain_model_mapregion.locations">
 				<source>Locations</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_maplocation">
+			<trans-unit id="tx_ki_domain_model_maplocation">
 				<source>Map Location</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_maplocation.region">
+			<trans-unit id="tx_ki_domain_model_maplocation.region">
 				<source>Region</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_maplocation.map">
+			<trans-unit id="tx_ki_domain_model_maplocation.map">
 				<source>Map</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_frontend.name">
+			<trans-unit id="tx_ki_frontend.name">
 				<source>Frontend</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_frontend.description">
+			<trans-unit id="tx_ki_frontend.description">
 				<source></source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_game">
+			<trans-unit id="tx_ki_domain_model_game">
 				<source>Game</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_game.title">
+			<trans-unit id="tx_ki_domain_model_game.title">
 				<source>Title</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_game.map">
+			<trans-unit id="tx_ki_domain_model_game.map">
 				<source>Map</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_game.regions">
+			<trans-unit id="tx_ki_domain_model_game.regions">
 				<source>Regions</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_game.players">
+			<trans-unit id="tx_ki_domain_model_game.players">
 				<source>Players</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_gamemapregion">
+			<trans-unit id="tx_ki_domain_model_gamemapregion">
 				<source>Game Map Region</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_gamemapregion.origin">
+			<trans-unit id="tx_ki_domain_model_gamemapregion.origin">
 				<source>Origin</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_gamemapregion.game">
+			<trans-unit id="tx_ki_domain_model_gamemapregion.game">
 				<source>Game</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_gamemapregion.locations">
+			<trans-unit id="tx_ki_domain_model_gamemapregion.locations">
 				<source>Locations</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_gamemaplocation">
+			<trans-unit id="tx_ki_domain_model_gamemaplocation">
 				<source>Game Map Location</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_gamemaplocation.region">
+			<trans-unit id="tx_ki_domain_model_gamemaplocation.region">
 				<source>Region</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_gamemaplocation.origin">
+			<trans-unit id="tx_ki_domain_model_gamemaplocation.origin">
 				<source>Origin</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_gameplayer">
+			<trans-unit id="tx_ki_domain_model_gameplayer">
 				<source>Game Player</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_gameplayer.title">
+			<trans-unit id="tx_ki_domain_model_gameplayer.title">
 				<source>Title</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_queue">
+			<trans-unit id="tx_ki_domain_model_queue">
 				<source>Queue</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_queue.processor">
+			<trans-unit id="tx_ki_domain_model_queue.processor">
 				<source>Processor</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_queue.expiry_date">
+			<trans-unit id="tx_ki_domain_model_queue.expiry_date">
 				<source>Expiry Date</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_queue.arguments">
+			<trans-unit id="tx_ki_domain_model_queue.arguments">
 				<source>Arguments</source>
 			</trans-unit>
-			<trans-unit id="tx_ai_domain_model_queue.game">
+			<trans-unit id="tx_ki_domain_model_queue.game">
 				<source>Game</source>
 			</trans-unit>
 		</body>
