@@ -1,6 +1,6 @@
 <?php
 
-namespace Ps\Ai\Domain\Model;
+namespace Ps\Ki\Domain\Model;
 
 /***
  *
@@ -21,21 +21,21 @@ class GameMapLocation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * region
 	 *
-	 * @var \Ps\Ai\Domain\Model\GameMapRegion
+	 * @var \Ps\Ki\Domain\Model\GameMapRegion
 	 */
 	protected $region = null;
 
 	/**
 	 * origin
 	 *
-	 * @var \Ps\Ai\Domain\Model\MapLocation
+	 * @var \Ps\Ki\Domain\Model\MapLocation
 	 */
 	protected $origin = null;
 
 	/**
 	 * Returns the region
 	 *
-	 * @return \Ps\Ai\Domain\Model\GameMapRegion $region
+	 * @return \Ps\Ki\Domain\Model\GameMapRegion $region
 	 */
 	public function getRegion() {
 		return $this->region;
@@ -44,17 +44,17 @@ class GameMapLocation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the region
 	 *
-	 * @param \Ps\Ai\Domain\Model\GameMapRegion $region
+	 * @param \Ps\Ki\Domain\Model\GameMapRegion $region
 	 * @return void
 	 */
-	public function setRegion(\Ps\Ai\Domain\Model\GameMapRegion $region) {
+	public function setRegion(\Ps\Ki\Domain\Model\GameMapRegion $region) {
 		$this->region = $region;
 	}
 
 	/**
 	 * Returns the origin
 	 *
-	 * @return \Ps\Ai\Domain\Model\MapLocation $origin
+	 * @return \Ps\Ki\Domain\Model\MapLocation $origin
 	 */
 	public function getOrigin() {
 		return $this->origin;
@@ -63,10 +63,10 @@ class GameMapLocation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the origin
 	 *
-	 * @param \Ps\Ai\Domain\Model\MapLocation $origin
+	 * @param \Ps\Ki\Domain\Model\MapLocation $origin
 	 * @return void
 	 */
-	public function setOrigin(\Ps\Ai\Domain\Model\MapLocation $origin) {
+	public function setOrigin(\Ps\Ki\Domain\Model\MapLocation $origin) {
 		$this->origin = $origin;
 	}
 }

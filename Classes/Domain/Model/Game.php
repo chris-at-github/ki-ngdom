@@ -1,6 +1,6 @@
 <?php
 
-namespace Ps\Ai\Domain\Model;
+namespace Ps\Ki\Domain\Model;
 
 /***
  *
@@ -25,14 +25,14 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * map
 	 * 
-	 * @var \Ps\Ai\Domain\Model\Map
+	 * @var \Ps\Ki\Domain\Model\Map
 	 */
 	protected $map = null;
 
 	/**
 	 * regions
 	 *
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ai\Domain\Model\GameMapRegion>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ki\Domain\Model\GameMapRegion>
 	 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 	 */
 	protected $regions = null;
@@ -40,7 +40,7 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * regions
 	 *
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ai\Domain\Model\GamePlayer>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ki\Domain\Model\GamePlayer>
 	 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 	 */
 	protected $players = null;
@@ -82,7 +82,7 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Returns the map
 	 * 
-	 * @return \Ps\Ai\Domain\Model\Map $map
+	 * @return \Ps\Ki\Domain\Model\Map $map
 	 */
 	public function getMap() {
 		return $this->map;
@@ -91,37 +91,37 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the map
 	 * 
-	 * @param \Ps\Ai\Domain\Model\Map $map
+	 * @param \Ps\Ki\Domain\Model\Map $map
 	 * @return void
 	 */
-	public function setMap(\Ps\Ai\Domain\Model\Map $map) {
+	public function setMap(\Ps\Ki\Domain\Model\Map $map) {
 		$this->map = $map;
 	}
 
 	/**
 	 * Adds a MapRegion
 	 *
-	 * @param \Ps\Ai\Domain\Model\GameMapRegion $region
+	 * @param \Ps\Ki\Domain\Model\GameMapRegion $region
 	 * @return void
 	 */
-	public function addRegion(\Ps\Ai\Domain\Model\GameMapRegion $region) {
+	public function addRegion(\Ps\Ki\Domain\Model\GameMapRegion $region) {
 		$this->regions->attach($region);
 	}
 
 	/**
 	 * Removes a MapRegion
 	 *
-	 * @param \Ps\Ai\Domain\Model\GameMapRegion $region The MapRegion to be removed
+	 * @param \Ps\Ki\Domain\Model\GameMapRegion $region The MapRegion to be removed
 	 * @return void
 	 */
-	public function removeRegion(\Ps\Ai\Domain\Model\GameMapRegion $region)	{
+	public function removeRegion(\Ps\Ki\Domain\Model\GameMapRegion $region)	{
 		$this->regions->detach($region);
 	}
 
 	/**
 	 * Returns the regions
 	 *
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ai\Domain\Model\GameMapRegion> $regions
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ki\Domain\Model\GameMapRegion> $regions
 	 */
 	public function getRegions() {
 		return $this->regions;
@@ -130,7 +130,7 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the regions
 	 *
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ai\Domain\Model\GameMapRegion> $regions
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ki\Domain\Model\GameMapRegion> $regions
 	 * @return void
 	 */
 	public function setRegions(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $regions) {
@@ -138,30 +138,30 @@ class Game extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	}
 
 	/**
-	 * @param \Ps\Ai\Domain\Model\GamePlayer $player
+	 * @param \Ps\Ki\Domain\Model\GamePlayer $player
 	 * @return void
 	 */
-	public function addPlayer(\Ps\Ai\Domain\Model\GamePlayer $player) {
+	public function addPlayer(\Ps\Ki\Domain\Model\GamePlayer $player) {
 		$this->players->attach($player);
 	}
 
 	/**
-	 * @param \Ps\Ai\Domain\Model\GamePlayer $player
+	 * @param \Ps\Ki\Domain\Model\GamePlayer $player
 	 * @return void
 	 */
-	public function removePlayer(\Ps\Ai\Domain\Model\GamePlayer $player) {
+	public function removePlayer(\Ps\Ki\Domain\Model\GamePlayer $player) {
 		$this->players->detach($player);
 	}
 
 	/**
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ai\Domain\Model\GamePlayer> $players
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ki\Domain\Model\GamePlayer> $players
 	 */
 	public function getPlayers() {
 		return $this->players;
 	}
 
 	/**
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ai\Domain\Model\GamePlayer> $players
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ki\Domain\Model\GamePlayer> $players
 	 * @return void
 	 */
 	public function setPlayers(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $players) {

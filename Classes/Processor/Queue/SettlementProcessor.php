@@ -1,6 +1,6 @@
 <?php
 
-namespace Ps\Ai\Processor\Queue;
+namespace Ps\Ki\Processor\Queue;
 
 use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 

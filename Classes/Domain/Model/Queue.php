@@ -1,5 +1,5 @@
 <?php
-namespace Ps\Ai\Domain\Model;
+namespace Ps\Ki\Domain\Model;
 
 /***
  *
@@ -40,7 +40,7 @@ class Queue extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * game
 	 *
-	 * @var \Ps\Ai\Domain\Model\Game
+	 * @var \Ps\Ki\Domain\Model\Game
 	 */
 	protected $game = null;
 
@@ -108,7 +108,7 @@ class Queue extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Returns the game
 	 *
-	 * @return \Ps\Ai\Domain\Model\Game $game
+	 * @return \Ps\Ki\Domain\Model\Game $game
 	 */
 	public function getGame() {
 		return $this->game;
@@ -117,10 +117,10 @@ class Queue extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the game
 	 *
-	 * @param \Ps\Ai\Domain\Model\Game $game
+	 * @param \Ps\Ki\Domain\Model\Game $game
 	 * @return void
 	 */
-	public function setGame(\Ps\Ai\Domain\Model\Game $game) {
+	public function setGame(\Ps\Ki\Domain\Model\Game $game) {
 		$this->game = $game;
 	}
 }

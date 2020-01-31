@@ -1,9 +1,9 @@
 <?php
 
-namespace Ps\Ai\Processor\GameCreator;
+namespace Ps\Ki\Processor\GameCreator;
 
-use Ps\Ai\Domain\Model\Game;
-use Ps\Ai\Domain\Model\GamePlayer;
+use Ps\Ki\Domain\Model\Game;
+use Ps\Ki\Domain\Model\GamePlayer;
 
 /***
  *
@@ -20,13 +20,13 @@ class PlayerCreator extends AbstractCreator
 {
 
 	/**
-	 * @param \Ps\Ai\Domain\Model\Game $game
+	 * @param \Ps\Ki\Domain\Model\Game $game
 	 * @param array $options
 	 * @return void
 	 */
 	public function create(Game $game, $options) {
 
-		/** @var \Ps\Ai\Domain\Model\GamePlayer $gamePlayer */
+		/** @var \Ps\Ki\Domain\Model\GamePlayer $gamePlayer */
 		$gamePlayer = $this->objectManager->get(GamePlayer::class);
 		$gamePlayer->setTitle('Player #' . time());
 

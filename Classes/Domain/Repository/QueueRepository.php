@@ -1,5 +1,5 @@
 <?php
-namespace Ps\Ai\Domain\Repository;
+namespace Ps\Ki\Domain\Repository;
 
 /***
  *

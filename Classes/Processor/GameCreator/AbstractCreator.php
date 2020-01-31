@@ -1,8 +1,8 @@
 <?php
 
-namespace Ps\Ai\Processor\GameCreator;
+namespace Ps\Ki\Processor\GameCreator;
 
-use Ps\Ai\Domain\Model\Game;
+use Ps\Ki\Domain\Model\Game;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
 
 /***
@@ -25,7 +25,7 @@ abstract class AbstractCreator {
 	protected $objectManager;
 
 	/**
-	 * @param \Ps\Ai\Domain\Model\Game $game
+	 * @param \Ps\Ki\Domain\Model\Game $game
 	 * @param array $options
 	 * @return void
 	 */

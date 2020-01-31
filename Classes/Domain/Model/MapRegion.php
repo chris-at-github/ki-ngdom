@@ -1,6 +1,6 @@
 <?php
 
-namespace Ps\Ai\Domain\Model;
+namespace Ps\Ki\Domain\Model;
 
 /***
  *
@@ -24,14 +24,14 @@ class MapRegion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * map
 	 *
-	 * @var \Ps\Ai\Domain\Model\Map
+	 * @var \Ps\Ki\Domain\Model\Map
 	 */
 	protected $map = null;
 
 	/**
 	 * locations
 	 *
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ai\Domain\Model\MapLocation>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ki\Domain\Model\MapLocation>
 	 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 	 */
 	protected $locations = null;
@@ -72,7 +72,7 @@ class MapRegion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Returns the map
 	 *
-	 * @return \Ps\Ai\Domain\Model\Map $map
+	 * @return \Ps\Ki\Domain\Model\Map $map
 	 */
 	public function getMap() {
 		return $this->map;
@@ -81,37 +81,37 @@ class MapRegion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the map
 	 *
-	 * @param \Ps\Ai\Domain\Model\Map $map
+	 * @param \Ps\Ki\Domain\Model\Map $map
 	 * @return void
 	 */
-	public function setMap(\Ps\Ai\Domain\Model\Map $map) {
+	public function setMap(\Ps\Ki\Domain\Model\Map $map) {
 		$this->map = $map;
 	}
 
 	/**
 	 * Adds a MapRegion
 	 *
-	 * @param \Ps\Ai\Domain\Model\MapLocation $location
+	 * @param \Ps\Ki\Domain\Model\MapLocation $location
 	 * @return void
 	 */
-	public function addLocation(\Ps\Ai\Domain\Model\MapLocation $location) {
+	public function addLocation(\Ps\Ki\Domain\Model\MapLocation $location) {
 		$this->locations->attach($location);
 	}
 
 	/**
 	 * Removes a MapRegion
 	 *
-	 * @param \Ps\Ai\Domain\Model\MapLocation $location The MapRegion to be removed
+	 * @param \Ps\Ki\Domain\Model\MapLocation $location The MapRegion to be removed
 	 * @return void
 	 */
-	public function removeLocation(\Ps\Ai\Domain\Model\MapLocation $location) {
+	public function removeLocation(\Ps\Ki\Domain\Model\MapLocation $location) {
 		$this->locations->detach($location);
 	}
 
 	/**
 	 * Returns the regions
 	 *
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ai\Domain\Model\MapLocation> $locations
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ki\Domain\Model\MapLocation> $locations
 	 */
 	public function getLocations() {
 		return $this->locations;
@@ -120,7 +120,7 @@ class MapRegion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the regions
 	 *
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ai\Domain\Model\MapLocation> $locations
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ki\Domain\Model\MapLocation> $locations
 	 * @return void
 	 */
 	public function setLocations(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $locations) {

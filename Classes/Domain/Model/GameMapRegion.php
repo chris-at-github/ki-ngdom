@@ -1,6 +1,6 @@
 <?php
 
-namespace Ps\Ai\Domain\Model;
+namespace Ps\Ki\Domain\Model;
 
 /***
  *
@@ -21,21 +21,21 @@ class GameMapRegion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * origin
 	 *
-	 * @var \Ps\Ai\Domain\Model\MapRegion
+	 * @var \Ps\Ki\Domain\Model\MapRegion
 	 */
 	protected $origin = null;
 
 	/**
 	 * game
 	 *
-	 * @var \Ps\Ai\Domain\Model\Game
+	 * @var \Ps\Ki\Domain\Model\Game
 	 */
 	protected $game = null;
 
 	/**
 	 * locations
 	 *
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ai\Domain\Model\GameMapLocation>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ki\Domain\Model\GameMapLocation>
 	 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 	 */
 	protected $locations = null;
@@ -57,7 +57,7 @@ class GameMapRegion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Returns the origin
 	 *
-	 * @return \Ps\Ai\Domain\Model\MapRegion $origin
+	 * @return \Ps\Ki\Domain\Model\MapRegion $origin
 	 */
 	public function getOrigin() {
 		return $this->origin;
@@ -66,17 +66,17 @@ class GameMapRegion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the origin
 	 *
-	 * @param \Ps\Ai\Domain\Model\MapRegion $origin
+	 * @param \Ps\Ki\Domain\Model\MapRegion $origin
 	 * @return void
 	 */
-	public function setOrigin(\Ps\Ai\Domain\Model\MapRegion $origin) {
+	public function setOrigin(\Ps\Ki\Domain\Model\MapRegion $origin) {
 		$this->origin = $origin;
 	}
 
 	/**
 	 * Returns the game
 	 *
-	 * @return \Ps\Ai\Domain\Model\Game $game
+	 * @return \Ps\Ki\Domain\Model\Game $game
 	 */
 	public function getGame() {
 		return $this->game;
@@ -85,37 +85,37 @@ class GameMapRegion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the game
 	 *
-	 * @param \Ps\Ai\Domain\Model\Game $game
+	 * @param \Ps\Ki\Domain\Model\Game $game
 	 * @return void
 	 */
-	public function setGame(\Ps\Ai\Domain\Model\Game $game) {
+	public function setGame(\Ps\Ki\Domain\Model\Game $game) {
 		$this->game = $game;
 	}
 
 	/**
 	 * Adds a MapRegion
 	 *
-	 * @param \Ps\Ai\Domain\Model\GameMapLocation $location
+	 * @param \Ps\Ki\Domain\Model\GameMapLocation $location
 	 * @return void
 	 */
-	public function addLocation(\Ps\Ai\Domain\Model\GameMapLocation $location) {
+	public function addLocation(\Ps\Ki\Domain\Model\GameMapLocation $location) {
 		$this->locations->attach($location);
 	}
 
 	/**
 	 * Removes a MapRegion
 	 *
-	 * @param \Ps\Ai\Domain\Model\GameMapLocation $location The MapRegion to be removed
+	 * @param \Ps\Ki\Domain\Model\GameMapLocation $location The MapRegion to be removed
 	 * @return void
 	 */
-	public function removeLocation(\Ps\Ai\Domain\Model\GameMapLocation $location) {
+	public function removeLocation(\Ps\Ki\Domain\Model\GameMapLocation $location) {
 		$this->locations->detach($location);
 	}
 
 	/**
 	 * Returns the regions
 	 *
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ai\Domain\Model\GameMapLocation> $locations
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ki\Domain\Model\GameMapLocation> $locations
 	 */
 	public function getLocations() {
 		return $this->locations;
@@ -124,7 +124,7 @@ class GameMapRegion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the regions
 	 *
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ai\Domain\Model\GameMapLocation> $locations
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ki\Domain\Model\GameMapLocation> $locations
 	 * @return void
 	 */
 	public function setLocations(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $locations) {

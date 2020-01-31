@@ -1,10 +1,10 @@
 <?php
 
-namespace Ps\Ai\Processor\Queue;
+namespace Ps\Ki\Processor\Queue;
 
-use Ps\Ai\Domain\Model\Game;
-use Ps\Ai\Domain\Model\Queue;
-use Ps\Ai\Domain\Repository\QueueRepository;
+use Ps\Ki\Domain\Model\Game;
+use Ps\Ki\Domain\Model\Queue;
+use Ps\Ki\Domain\Repository\QueueRepository;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
 
 /***
@@ -21,7 +21,7 @@ use TYPO3\CMS\Extbase\Object\ObjectManager;
 abstract class AbstractProcessor {
 
 	/**
-	 * @var \Ps\Ai\Domain\Model\Game
+	 * @var \Ps\Ki\Domain\Model\Game
 	 */
 	protected $game;
 
@@ -47,14 +47,14 @@ abstract class AbstractProcessor {
 	abstract public function finish();
 
 	/**
-	 * @param \Ps\Ai\Domain\Model\Game $game
+	 * @param \Ps\Ki\Domain\Model\Game $game
 	 */
-	public function setGame(\Ps\Ai\Domain\Model\Game $game) {
+	public function setGame(\Ps\Ki\Domain\Model\Game $game) {
 		$this->game = $game;
 	}
 
 	/**
-	 * @return \Ps\Ai\Domain\Model\Game
+	 * @return \Ps\Ki\Domain\Model\Game
 	 */
 	public function getGame() {
 		return $this->game;
@@ -75,11 +75,11 @@ abstract class AbstractProcessor {
 	}
 
 	/**
-	 * @return \Ps\Ai\Processor\Queue
+	 * @return \Ps\Ki\Processor\Queue
 	 */
 	protected function getQueue() {
 
-		/** @var \Ps\Ai\Processor\Queue $queue */
+		/** @var \Ps\Ki\Processor\Queue $queue */
 		$queue = $this->objectManager->get(Queue::class);
 		$queue->setProcessor(get_class($this));
 		$queue->setGame($this->getGame());
@@ -88,7 +88,7 @@ abstract class AbstractProcessor {
 	}
 
 	/**
-	 * @param \Ps\Ai\Processor\Queue $queue
+	 * @param \Ps\Ki\Processor\Queue $queue
 	 */
 	protected function store($queue) {
 		if($queue->getUid() === null) {

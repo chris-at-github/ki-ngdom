@@ -1,12 +1,12 @@
 <?php
 
-namespace Ps\Ai\Controller;
+namespace Ps\Ki\Controller;
 
-use Ps\Ai\Domain\Model\Game;
-use Ps\Ai\Domain\Model\Map;
-use Ps\Ai\Domain\Repository\GameRepository;
-use Ps\Ai\Domain\Repository\MapRepository;
-use Ps\Ai\Processor\Queue\SettlementProcessor;
+use Ps\Ki\Domain\Model\Game;
+use Ps\Ki\Domain\Model\Map;
+use Ps\Ki\Domain\Repository\GameRepository;
+use Ps\Ki\Domain\Repository\MapRepository;
+use Ps\Ki\Processor\Queue\SettlementProcessor;
 use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 class GameController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
@@ -20,7 +20,7 @@ class GameController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	}
 
 	/**
-	 * @param \Ps\Ai\Domain\Model\Game $game
+	 * @param \Ps\Ki\Domain\Model\Game $game
 	 * @param array $options
 	 * @return void
 	 */
@@ -28,11 +28,11 @@ class GameController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		$this->objectManager->get(GameRepository::class)->add($game);
 
 		foreach([
-			\Ps\Ai\Processor\GameCreator\MapCreator::class,
-			\Ps\Ai\Processor\GameCreator\PlayerCreator::class
+			\Ps\Ki\Processor\GameCreator\MapCreator::class,
+			\Ps\Ki\Processor\GameCreator\PlayerCreator::class
 		] as $fqcn) {
 
-			/** @var \Ps\Ai\Processor\GameCreator\AbstractCreator $gameCreator */
+			/** @var \Ps\Ki\Processor\GameCreator\AbstractCreator $gameCreator */
 			$gameCreator = $this->objectManager->get($fqcn);
 			$gameCreator->create($game, $options);
 		}
@@ -41,7 +41,7 @@ class GameController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	}
 
 	/**
-	 * @param \Ps\Ai\Domain\Model\Game $game
+	 * @param \Ps\Ki\Domain\Model\Game $game
 	 * @return void
 	 */
 	public function playgroundAction(Game $game) {

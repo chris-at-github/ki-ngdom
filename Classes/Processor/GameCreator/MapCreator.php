@@ -1,11 +1,11 @@
 <?php
 
-namespace Ps\Ai\Processor\GameCreator;
+namespace Ps\Ki\Processor\GameCreator;
 
-use Ps\Ai\Domain\Model\Game;
-use Ps\Ai\Domain\Model\GameMapRegion;
-use Ps\Ai\Domain\Model\GameMapLocation;
-use Ps\Ai\Domain\Repository\GameRepository;
+use Ps\Ki\Domain\Model\Game;
+use Ps\Ki\Domain\Model\GameMapRegion;
+use Ps\Ki\Domain\Model\GameMapLocation;
+use Ps\Ki\Domain\Repository\GameRepository;
 use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 /***
@@ -22,24 +22,24 @@ use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 class MapCreator extends AbstractCreator {
 
 	/**
-	 * @param \Ps\Ai\Domain\Model\Game $game
+	 * @param \Ps\Ki\Domain\Model\Game $game
 	 * @param array $options
 	 * @return void
 	 */
 	public function create(Game $game, $options) {
 	
 		// Durchlaufe alle Regionen der Karte und fuege sie dem Spiel hinzu
-		/** @var \Ps\Ai\Domain\Model\MapRegion $region */
+		/** @var \Ps\Ki\Domain\Model\MapRegion $region */
 		foreach($game->getMap()->getRegions() as $region) {
 			
-			/** @var \Ps\Ai\Domain\Model\GameMapRegion $gameMapRegion */
+			/** @var \Ps\Ki\Domain\Model\GameMapRegion $gameMapRegion */
 			$gameMapRegion = $this->objectManager->get(GameMapRegion::class);
 			$gameMapRegion->setOrigin($region);
 
-			/** @var \Ps\Ai\Domain\Model\MapLocation $location */
+			/** @var \Ps\Ki\Domain\Model\MapLocation $location */
 			foreach($region->getLocations() as $location) {
 
-				/** @var \Ps\Ai\Domain\Model\GameMapLocation $gameMapLocation */
+				/** @var \Ps\Ki\Domain\Model\GameMapLocation $gameMapLocation */
 				$gameMapLocation = $this->objectManager->get(GameMapLocation::class);
 				$gameMapLocation->setOrigin($location);
 

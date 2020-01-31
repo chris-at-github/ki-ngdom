@@ -1,6 +1,6 @@
 <?php
 
-namespace Ps\Ai\Domain\Model;
+namespace Ps\Ki\Domain\Model;
 
 /***
  *
@@ -18,21 +18,21 @@ class MapLocation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * region
 	 *
-	 * @var \Ps\Ai\Domain\Model\MapRegion
+	 * @var \Ps\Ki\Domain\Model\MapRegion
 	 */
 	protected $region = null;
 
 	/**
 	 * map
 	 *
-	 * @var \Ps\Ai\Domain\Model\Map
+	 * @var \Ps\Ki\Domain\Model\Map
 	 */
 	protected $map = null;
 
 	/**
 	 * Returns the region
 	 *
-	 * @return \Ps\Ai\Domain\Model\MapRegion $region
+	 * @return \Ps\Ki\Domain\Model\MapRegion $region
 	 */
 	public function getRegion() {
 		return $this->region;
@@ -41,17 +41,17 @@ class MapLocation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the region
 	 *
-	 * @param \Ps\Ai\Domain\Model\MapRegion $region
+	 * @param \Ps\Ki\Domain\Model\MapRegion $region
 	 * @return void
 	 */
-	public function setRegion(\Ps\Ai\Domain\Model\MapRegion $region) {
+	public function setRegion(\Ps\Ki\Domain\Model\MapRegion $region) {
 		$this->region = $region;
 	}
 
 	/**
 	 * Returns the map
 	 *
-	 * @return \Ps\Ai\Domain\Model\Map $map
+	 * @return \Ps\Ki\Domain\Model\Map $map
 	 */
 	public function getMap() {
 		return $this->map;
@@ -60,10 +60,10 @@ class MapLocation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the map
 	 *
-	 * @param \Ps\Ai\Domain\Model\Map $map
+	 * @param \Ps\Ki\Domain\Model\Map $map
 	 * @return void
 	 */
-	public function setMap(\Ps\Ai\Domain\Model\Map $map) {
+	public function setMap(\Ps\Ki\Domain\Model\Map $map) {
 		$this->map = $map;
 	}
 }
