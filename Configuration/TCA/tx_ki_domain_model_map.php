@@ -1,7 +1,7 @@
 <?php
 return [
 	'ctrl' => [
-		'title' => 'LLL:EXT:ai/Resources/Private/Language/locallang_tca.xlf:tx_ai_domain_model_map',
+		'title' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_map',
 		'label' => 'title',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -18,7 +18,7 @@ return [
 			'endtime' => 'endtime',
 		],
 		'searchFields' => 'title',
-		'iconfile' => 'EXT:ai/Resources/Public/Icons/tx_ai_domain_model_map.gif'
+		'iconfile' => 'EXT:ki/Resources/Public/Icons/tx_ki_domain_model_map.gif'
 	],
 	'interface' => [
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, regions',
@@ -55,8 +55,8 @@ return [
 				'items' => [
 					['', 0],
 				],
-				'foreign_table' => 'tx_ai_domain_model_map',
-				'foreign_table_where' => 'AND {#tx_ai_domain_model_map}.{#pid}=###CURRENT_PID### AND {#tx_ai_domain_model_map}.{#sys_language_uid} IN (-1,0)',
+				'foreign_table' => 'tx_ki_domain_model_map',
+				'foreign_table_where' => 'AND {#tx_ki_domain_model_map}.{#pid}=###CURRENT_PID### AND {#tx_ki_domain_model_map}.{#sys_language_uid} IN (-1,0)',
 			],
 		],
 		'l10n_diffsource' => [
@@ -119,7 +119,7 @@ return [
 
 		'title' => [
 			'exclude' => true,
-			'label' => 'LLL:EXT:ai/Resources/Private/Language/locallang_tca.xlf:tx_ai_domain_model_map.title',
+			'label' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_map.title',
 			'config' => [
 				'type' => 'input',
 				'size' => 30,
@@ -128,10 +128,10 @@ return [
 		],
 		'regions' => [
 			'exclude' => 1,
-			'label' => 'LLL:EXT:ai/Resources/Private/Language/locallang_tca.xlf:tx_ai_domain_model_map.regions',
+			'label' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_map.regions',
 			'config' => [
 				'type' => 'inline',
-				'foreign_table' => 'tx_ai_domain_model_mapregion',
+				'foreign_table' => 'tx_ki_domain_model_mapregion',
 				'foreign_field' => 'map',
 				'maxitems' => 100,
 				'appearance' => [

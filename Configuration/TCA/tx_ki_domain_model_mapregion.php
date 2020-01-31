@@ -1,7 +1,7 @@
 <?php
 return [
 	'ctrl' => [
-		'title' => 'LLL:EXT:ai/Resources/Private/Language/locallang_tca.xlf:tx_ai_domain_model_mapregion',
+		'title' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_mapregion',
 		'label' => 'title',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -18,7 +18,7 @@ return [
 			'endtime' => 'endtime',
 		],
 		'searchFields' => 'title',
-		'iconfile' => 'EXT:ai/Resources/Public/Icons/tx_ai_domain_model_mapregion.gif'
+		'iconfile' => 'EXT:ki/Resources/Public/Icons/tx_ki_domain_model_mapregion.gif'
 	],
 	'interface' => [
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, map',
@@ -55,8 +55,8 @@ return [
 				'items' => [
 					['', 0],
 				],
-				'foreign_table' => 'tx_ai_domain_model_mapregion',
-				'foreign_table_where' => 'AND {#tx_ai_domain_model_mapregion}.{#pid}=###CURRENT_PID### AND {#tx_ai_domain_model_mapregion}.{#sys_language_uid} IN (-1,0)',
+				'foreign_table' => 'tx_ki_domain_model_mapregion',
+				'foreign_table_where' => 'AND {#tx_ki_domain_model_mapregion}.{#pid}=###CURRENT_PID### AND {#tx_ki_domain_model_mapregion}.{#sys_language_uid} IN (-1,0)',
 			],
 		],
 		'l10n_diffsource' => [
@@ -119,7 +119,7 @@ return [
 
 		'title' => [
 			'exclude' => true,
-			'label' => 'LLL:EXT:ai/Resources/Private/Language/locallang_tca.xlf:tx_ai_domain_model_mapregion.title',
+			'label' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_mapregion.title',
 			'config' => [
 				'type' => 'input',
 				'size' => 30,
@@ -128,21 +128,21 @@ return [
 		],
 		'map' => [
 			'exclude' => true,
-			'label' => 'LLL:EXT:ai/Resources/Private/Language/locallang_tca.xlf:tx_ai_domain_model_mapregion.map',
+			'label' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_mapregion.map',
 			'config' => [
 				'type' => 'select',
 				'renderType' => 'selectSingle',
-				'foreign_table' => 'tx_ai_domain_model_map',
+				'foreign_table' => 'tx_ki_domain_model_map',
 				'minitems' => 0,
 				'maxitems' => 1,
 			],
 		],
 		'locations' => [
 			'exclude' => 1,
-			'label' => 'LLL:EXT:ai/Resources/Private/Language/locallang_tca.xlf:tx_ai_domain_model_mapregion.locations',
+			'label' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_mapregion.locations',
 			'config' => [
 				'type' => 'inline',
-				'foreign_table' => 'tx_ai_domain_model_maplocation',
+				'foreign_table' => 'tx_ki_domain_model_maplocation',
 				'foreign_field' => 'region',
 				'maxitems' => 100,
 				'appearance' => [

@@ -1,7 +1,7 @@
 <?php
 return [
 	'ctrl' => [
-		'title' => 'LLL:EXT:ai/Resources/Private/Language/locallang_tca.xlf:tx_ai_domain_model_game',
+		'title' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_game',
 		'label' => 'title',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -18,7 +18,7 @@ return [
 			'endtime' => 'endtime',
 		],
 		'searchFields' => 'title',
-		'iconfile' => 'EXT:ai/Resources/Public/Icons/tx_ai_domain_model_game.gif'
+		'iconfile' => 'EXT:ki/Resources/Public/Icons/tx_ki_domain_model_game.gif'
 	],
 	'interface' => [
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, map, regions, players',
@@ -55,8 +55,8 @@ return [
 				'items' => [
 					['', 0],
 				],
-				'foreign_table' => 'tx_ai_domain_model_game',
-				'foreign_table_where' => 'AND {#tx_ai_domain_model_game}.{#pid}=###CURRENT_PID### AND {#tx_ai_domain_model_game}.{#sys_language_uid} IN (-1,0)',
+				'foreign_table' => 'tx_ki_domain_model_game',
+				'foreign_table_where' => 'AND {#tx_ki_domain_model_game}.{#pid}=###CURRENT_PID### AND {#tx_ki_domain_model_game}.{#sys_language_uid} IN (-1,0)',
 			],
 		],
 		'l10n_diffsource' => [
@@ -119,7 +119,7 @@ return [
 
 		'title' => [
 			'exclude' => true,
-			'label' => 'LLL:EXT:ai/Resources/Private/Language/locallang_tca.xlf:tx_ai_domain_model_game.title',
+			'label' => 'LLL:EXT:ai/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_game.title',
 			'config' => [
 				'type' => 'input',
 				'size' => 30,
@@ -128,21 +128,21 @@ return [
 		],
 		'map' => [
 			'exclude' => true,
-			'label' => 'LLL:EXT:ai/Resources/Private/Language/locallang_tca.xlf:tx_ai_domain_model_game.map',
+			'label' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_game.map',
 			'config' => [
 				'type' => 'select',
 				'renderType' => 'selectSingle',
-				'foreign_table' => 'tx_ai_domain_model_map',
+				'foreign_table' => 'tx_ki_domain_model_map',
 				'minitems' => 0,
 				'maxitems' => 1,
 			],
 		],
 		'regions' => [
 			'exclude' => 1,
-			'label' => 'LLL:EXT:ai/Resources/Private/Language/locallang_tca.xlf:tx_ai_domain_model_game.regions',
+			'label' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_game.regions',
 			'config' => [
 				'type' => 'inline',
-				'foreign_table' => 'tx_ai_domain_model_gamemapregion',
+				'foreign_table' => 'tx_ki_domain_model_gamemapregion',
 				'foreign_field' => 'game',
 				'maxitems' => 100,
 				'appearance' => [
@@ -153,10 +153,10 @@ return [
 		],
 		'players' => [
 			'exclude' => 1,
-			'label' => 'LLL:EXT:ai/Resources/Private/Language/locallang_tca.xlf:tx_ai_domain_model_game.players',
+			'label' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_game.players',
 			'config' => [
 				'type' => 'inline',
-				'foreign_table' => 'tx_ai_domain_model_gameplayer',
+				'foreign_table' => 'tx_ki_domain_model_gameplayer',
 				'foreign_field' => 'game',
 				'maxitems' => 100,
 				'appearance' => [

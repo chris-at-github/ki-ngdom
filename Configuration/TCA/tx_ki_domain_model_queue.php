@@ -1,7 +1,7 @@
 <?php
 return [
 	'ctrl' => [
-		'title' => 'LLL:EXT:ai/Resources/Private/Language/locallang_tca.xlf:tx_ai_domain_model_queue',
+		'title' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_queue',
 		'label' => 'processor',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -18,7 +18,7 @@ return [
 			'endtime' => 'endtime',
 		],
 		'searchFields' => 'processor,arguments',
-		'iconfile' => 'EXT:ai/Resources/Public/Icons/tx_ai_domain_model_queue.gif'
+		'iconfile' => 'EXT:ki/Resources/Public/Icons/tx_ki_domain_model_queue.gif'
 	],
 	'interface' => [
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, processor, expiry_date, arguments, game',
@@ -55,8 +55,8 @@ return [
 				'items' => [
 					['', 0],
 				],
-				'foreign_table' => 'tx_ai_domain_model_queue',
-				'foreign_table_where' => 'AND {#tx_ai_domain_model_queue}.{#pid}=###CURRENT_PID### AND {#tx_ai_domain_model_queue}.{#sys_language_uid} IN (-1,0)',
+				'foreign_table' => 'tx_ki_domain_model_queue',
+				'foreign_table_where' => 'AND {#tx_ki_domain_model_queue}.{#pid}=###CURRENT_PID### AND {#tx_ki_domain_model_queue}.{#sys_language_uid} IN (-1,0)',
 			],
 		],
 		'l10n_diffsource' => [
@@ -119,7 +119,7 @@ return [
 
 		'processor' => [
 			'exclude' => true,
-			'label' => 'LLL:EXT:ai/Resources/Private/Language/locallang_tca.xlf:tx_ai_domain_model_queue.processor',
+			'label' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_queue.processor',
 			'config' => [
 				'type' => 'input',
 				'size' => 30,
@@ -128,7 +128,7 @@ return [
 		],
 		'expiry_date' => [
 			'exclude' => true,
-			'label' => 'LLL:EXT:ai/Resources/Private/Language/locallang_tca.xlf:tx_ai_domain_model_queue.expiry_date',
+			'label' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_queue.expiry_date',
 			'config' => [
 				'type' => 'input',
 				'size' => 4,
@@ -137,7 +137,7 @@ return [
 		],
 		'arguments' => [
 			'exclude' => true,
-			'label' => 'LLL:EXT:ai/Resources/Private/Language/locallang_tca.xlf:tx_ai_domain_model_queue.arguments',
+			'label' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_queue.arguments',
 			'config' => [
 				'type' => 'text',
 				'cols' => 40,
@@ -147,11 +147,11 @@ return [
 		],
 		'game' => [
 			'exclude' => true,
-			'label' => 'LLL:EXT:ai/Resources/Private/Language/locallang_tca.xlf:tx_ai_domain_model_queue.game',
+			'label' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_queue.game',
 			'config' => [
 				'type' => 'select',
 				'renderType' => 'selectSingle',
-				'foreign_table' => 'tx_ai_domain_model_game',
+				'foreign_table' => 'tx_ki_domain_model_game',
 				'minitems' => 0,
 				'maxitems' => 1,
 			],
