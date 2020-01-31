@@ -1,0 +1,22 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Bootstrap & Xo
+@import 'functions';
+@import 'variables';
+@import 'mixins';
+@import 'definitions';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Definitions
+@import '../../../../xo/Resources/Public/Sass/xo/definitions/layout';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Xo
+@import '../../../../xo/Resources/Public/Sass/xo/reboot';
+@import '../../../../xo/Resources/Public/Sass/xo/type';
+@import '../../../../xo/Resources/Public/Sass/xo/svg';
+@import '../../../../xo/Resources/Public/Sass/xo/grid';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Layout
+@import 'kingdom/layout';
+@import 'kingdom/fluid-styled-content';
