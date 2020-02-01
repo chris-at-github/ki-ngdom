@@ -56,7 +56,27 @@
 			</div>
 
 			<div class="container">
-				<f:debug>{queue}</f:debug>
+				<div>
+					<f:link.action controller="Queue" action="process" arguments="{game: game}">Process</f:link.action>
+				</div>
+
+				<table class="table--layout-0">
+					<thead>
+						<tr>
+							<th>Processor</th>
+							<th>Expiry time</th>
+						</tr>
+					</thead>
+					<tbody>
+						<f:for each="{queue}" as="item">
+							<tr>
+								<td>{item.processor}</td>
+								<td>{item.expiryDate}</td>
+							</tr>
+						</f:for>
+					</tbody>
+				</table>
+
 			</div>
 		</div>
 	</f:section>
