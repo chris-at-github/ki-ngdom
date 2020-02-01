@@ -2,6 +2,7 @@
 
 namespace Ps\Ki\Controller;
 
+use Ps\Ki\Domain\Repository\QueueRepository;
 use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 class QueueController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
@@ -33,5 +34,16 @@ class QueueController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 		$creator->create();
 
 		$this->redirect('playground', 'Game', null, ['game' => $game]);
+	}
+
+	/**
+	 * @param \Ps\Ki\Domain\Model\Game $game
+	 */
+	public function processAction($game) {
+		$queue = $this->objectManager->get(QueueRepository::class)->findAll([
+			'game' => $game
+		]);
+
+		DebuggerUtility::var_dump($queue);
 	}
 }

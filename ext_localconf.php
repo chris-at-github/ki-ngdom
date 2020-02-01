@@ -7,13 +7,13 @@ call_user_func(function() {
 		'Frontend',
 		[
 			'Game' => 'index, create, playground',
-			'Queue' => 'wizard, create',
+			'Queue' => 'wizard, create, process',
 		],
 
 		// non-cacheable actions
 		[
 			'Game' => 'index, create, playground',
-			'Queue' => 'wizard, create',
+			'Queue' => 'wizard, create, process',
 		]
 	);
 
