@@ -9,14 +9,14 @@ namespace Ps\Ki\Domain\Model;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2020 Christian Pschorr <pschorr.christian@gmail.com>
+ * (c) 2020 Christian Pschorr <pschorr.christian@gmail.com>
  *
  ***/
 
 /**
- * GameMapLocation
+ * GameMapCoordinate
  */
-class GameMapLocation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+class GameMapCoordinate extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
 	 * region
@@ -28,7 +28,7 @@ class GameMapLocation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * origin
 	 *
-	 * @var \Ps\Ki\Domain\Model\MapLocation
+	 * @var \Ps\Ki\Domain\Model\MapCoordinate
 	 */
 	protected $origin = null;
 
@@ -54,7 +54,7 @@ class GameMapLocation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Returns the origin
 	 *
-	 * @return \Ps\Ki\Domain\Model\MapLocation $origin
+	 * @return \Ps\Ki\Domain\Model\MapCoordinate $origin
 	 */
 	public function getOrigin() {
 		return $this->origin;
@@ -63,10 +63,10 @@ class GameMapLocation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the origin
 	 *
-	 * @param \Ps\Ki\Domain\Model\MapLocation $origin
+	 * @param \Ps\Ki\Domain\Model\MapCoordinate $origin
 	 * @return void
 	 */
-	public function setOrigin(\Ps\Ki\Domain\Model\MapLocation $origin) {
+	public function setOrigin(\Ps\Ki\Domain\Model\MapCoordinate $origin) {
 		$this->origin = $origin;
 	}
 }

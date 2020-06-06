@@ -4,12 +4,12 @@ namespace Ps\Ki\Domain\Model;
 
 /***
  *
- * This file is part of the "Ai" Extension for TYPO3 CMS.
+ * This file is part of the "Ki" Extension for TYPO3 CMS.
  *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2020 Christian Pschorr <pschorr.christian@gmail.com>
+ * (c) 2020 Christian Pschorr <pschorr.christian@gmail.com>
  *
  ***/
 
@@ -33,12 +33,12 @@ class GameMapRegion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $game = null;
 
 	/**
-	 * locations
+	 * coordinates
 	 *
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ki\Domain\Model\GameMapLocation>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ki\Domain\Model\GameMapCoordinate>
 	 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 	 */
-	protected $locations = null;
+	protected $coordinates = null;
 
 	/**
 	 * __construct
@@ -51,7 +51,7 @@ class GameMapRegion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @return void
 	 */
 	protected function initStorageObjects() {
-		$this->locations = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->coordinates = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	}
 
 	/**
@@ -95,39 +95,39 @@ class GameMapRegion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Adds a MapRegion
 	 *
-	 * @param \Ps\Ki\Domain\Model\GameMapLocation $location
+	 * @param \Ps\Ki\Domain\Model\GameMapCoordinate $coordinate
 	 * @return void
 	 */
-	public function addLocation(\Ps\Ki\Domain\Model\GameMapLocation $location) {
-		$this->locations->attach($location);
+	public function addCoordinate(\Ps\Ki\Domain\Model\GameMapCoordinate $coordinate) {
+		$this->coordinates->attach($coordinate);
 	}
 
 	/**
 	 * Removes a MapRegion
 	 *
-	 * @param \Ps\Ki\Domain\Model\GameMapLocation $location The MapRegion to be removed
+	 * @param \Ps\Ki\Domain\Model\GameMapCoordinate $coordinate The MapRegion to be removed
 	 * @return void
 	 */
-	public function removeLocation(\Ps\Ki\Domain\Model\GameMapLocation $location) {
-		$this->locations->detach($location);
+	public function removeCoordinate(\Ps\Ki\Domain\Model\GameMapCoordinate $coordinate) {
+		$this->coordinates->detach($coordinate);
 	}
 
 	/**
 	 * Returns the regions
 	 *
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ki\Domain\Model\GameMapLocation> $locations
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ki\Domain\Model\GameMapCoordinate> $coordinates
 	 */
-	public function getLocations() {
-		return $this->locations;
+	public function getCoordinates() {
+		return $this->coordinates;
 	}
 
 	/**
 	 * Sets the regions
 	 *
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ki\Domain\Model\GameMapLocation> $locations
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ki\Domain\Model\GameMapCoordinate> $coordinates
 	 * @return void
 	 */
-	public function setLocations(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $locations) {
-		$this->locations = $locations;
+	public function setCoordinates(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $coordinates) {
+		$this->coordinates = $coordinates;
 	}
 }

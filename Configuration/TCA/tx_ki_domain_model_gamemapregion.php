@@ -20,10 +20,10 @@ return [
 		'iconfile' => 'EXT:ki/Resources/Public/Icons/tx_ki_domain_model_gamemapregion.gif'
 	],
 	'interface' => [
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, origin, game, locations',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, origin, game, coordinates',
 	],
 	'types' => [
-		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, origin, game, locations, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, origin, game, coordinates, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
 	],
 	'columns' => [
 		'sys_language_uid' => [
@@ -138,12 +138,12 @@ return [
 				'maxitems' => 1,
 			],
 		],
-		'locations' => [
+		'coordinates' => [
 			'exclude' => 1,
-			'label' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_gamemapregion.locations',
+			'label' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_gamemapregion.coordinates',
 			'config' => [
 				'type' => 'inline',
-				'foreign_table' => 'tx_ki_domain_model_gamemaplocation',
+				'foreign_table' => 'tx_ki_domain_model_gamemapcoordinate',
 				'foreign_field' => 'region',
 				'maxitems' => 100,
 				'appearance' => [

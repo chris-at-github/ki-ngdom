@@ -29,12 +29,12 @@ class MapRegion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $map = null;
 
 	/**
-	 * locations
+	 * coordinates
 	 *
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ki\Domain\Model\MapLocation>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ki\Domain\Model\MapCoordinate>
 	 * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
 	 */
-	protected $locations = null;
+	protected $coordinates = null;
 
 	/**
 	 * __construct
@@ -47,7 +47,7 @@ class MapRegion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @return void
 	 */
 	protected function initStorageObjects() {
-		$this->locations = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->coordinates = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	}
 
 	/**
@@ -91,39 +91,39 @@ class MapRegion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Adds a MapRegion
 	 *
-	 * @param \Ps\Ki\Domain\Model\MapLocation $location
+	 * @param \Ps\Ki\Domain\Model\MapCoordinate $coordinate
 	 * @return void
 	 */
-	public function addLocation(\Ps\Ki\Domain\Model\MapLocation $location) {
-		$this->locations->attach($location);
+	public function addCoordinate(\Ps\Ki\Domain\Model\MapCoordinate $coordinate) {
+		$this->coordinates->attach($coordinate);
 	}
 
 	/**
 	 * Removes a MapRegion
 	 *
-	 * @param \Ps\Ki\Domain\Model\MapLocation $location The MapRegion to be removed
+	 * @param \Ps\Ki\Domain\Model\MapCoordinate $coordinate The MapRegion to be removed
 	 * @return void
 	 */
-	public function removeLocation(\Ps\Ki\Domain\Model\MapLocation $location) {
-		$this->locations->detach($location);
+	public function removeCoordinate(\Ps\Ki\Domain\Model\MapCoordinate $coordinate) {
+		$this->coordinates->detach($coordinate);
 	}
 
 	/**
 	 * Returns the regions
 	 *
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ki\Domain\Model\MapLocation> $locations
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ki\Domain\Model\MapCoordinate> $coordinates
 	 */
-	public function getLocations() {
-		return $this->locations;
+	public function getCoordinates() {
+		return $this->coordinates;
 	}
 
 	/**
 	 * Sets the regions
 	 *
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ki\Domain\Model\MapLocation> $locations
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Ps\Ki\Domain\Model\MapCoordinate> $coordinates
 	 * @return void
 	 */
-	public function setLocations(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $locations) {
-		$this->locations = $locations;
+	public function setCoordinates(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $coordinates) {
+		$this->coordinates = $coordinates;
 	}
 }

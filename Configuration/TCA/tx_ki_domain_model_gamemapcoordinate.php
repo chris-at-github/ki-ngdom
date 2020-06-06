@@ -1,7 +1,7 @@
 <?php
 return [
 	'ctrl' => [
-		'title' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_gamemaplocation',
+		'title' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_gamemapcoordinate',
 		'label' => 'region',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -17,7 +17,7 @@ return [
 			'endtime' => 'endtime',
 		],
 		'searchFields' => '',
-		'iconfile' => 'EXT:ki/Resources/Public/Icons/tx_ki_domain_model_gamemaplocation.gif'
+		'iconfile' => 'EXT:ki/Resources/Public/Icons/tx_ki_domain_model_gamemapcoordinate.gif'
 	],
 	'interface' => [
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, origin, region',
@@ -54,8 +54,8 @@ return [
 				'items' => [
 					['', 0],
 				],
-				'foreign_table' => 'tx_ki_domain_model_gamemaplocation',
-				'foreign_table_where' => 'AND {#tx_ki_domain_model_gamemaplocation}.{#pid}=###CURRENT_PID### AND {#tx_ki_domain_model_gamemaplocation}.{#sys_language_uid} IN (-1,0)',
+				'foreign_table' => 'tx_ki_domain_model_gamemapcoordinate',
+				'foreign_table_where' => 'AND {#tx_ki_domain_model_gamemapcoordinate}.{#pid}=###CURRENT_PID### AND {#tx_ki_domain_model_gamemapcoordinate}.{#sys_language_uid} IN (-1,0)',
 			],
 		],
 		'l10n_diffsource' => [
@@ -118,18 +118,18 @@ return [
 
 		'origin' => [
 			'exclude' => true,
-			'label' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_gamemaplocation.origin',
+			'label' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_gamemapcoordinate.origin',
 			'config' => [
 				'type' => 'select',
 				'renderType' => 'selectSingle',
-				'foreign_table' => 'tx_ki_domain_model_maplocation',
+				'foreign_table' => 'tx_ki_domain_model_mapcoordinate',
 				'minitems' => 0,
 				'maxitems' => 1,
 			],
 		],		
 		'region' => [
 			'exclude' => true,
-			'label' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_gamemaplocation.region',
+			'label' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_gamemapcoordinate.region',
 			'config' => [
 				'type' => 'select',
 				'renderType' => 'selectSingle',

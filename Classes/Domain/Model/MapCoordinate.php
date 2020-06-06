@@ -13,7 +13,7 @@ namespace Ps\Ki\Domain\Model;
  *
  ***/
 
-class MapLocation extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+class MapCoordinate extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
 	 * region

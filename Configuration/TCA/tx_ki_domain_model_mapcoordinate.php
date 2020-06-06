@@ -1,7 +1,7 @@
 <?php
 return [
 	'ctrl' => [
-		'title' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_maplocation',
+		'title' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_mapcoordinate',
 		'label' => 'region',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -18,7 +18,7 @@ return [
 			'endtime' => 'endtime',
 		],
 		'searchFields' => '',
-		'iconfile' => 'EXT:ki/Resources/Public/Icons/tx_ki_domain_model_maplocation.gif'
+		'iconfile' => 'EXT:ki/Resources/Public/Icons/tx_ki_domain_model_mapcoordinate.gif'
 	],
 	'interface' => [
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, region, map',
@@ -55,8 +55,8 @@ return [
 				'items' => [
 					['', 0],
 				],
-				'foreign_table' => 'tx_ki_domain_model_maplocation',
-				'foreign_table_where' => 'AND {#tx_ki_domain_model_maplocation}.{#pid}=###CURRENT_PID### AND {#tx_ki_domain_model_maplocation}.{#sys_language_uid} IN (-1,0)',
+				'foreign_table' => 'tx_ki_domain_model_mapcoordinate',
+				'foreign_table_where' => 'AND {#tx_ki_domain_model_mapcoordinate}.{#pid}=###CURRENT_PID### AND {#tx_ki_domain_model_mapcoordinate}.{#sys_language_uid} IN (-1,0)',
 			],
 		],
 		'l10n_diffsource' => [
@@ -119,7 +119,7 @@ return [
 
 		'region' => [
 			'exclude' => true,
-			'label' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_maplocation.region',
+			'label' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_mapcoordinate.region',
 			'config' => [
 				'type' => 'select',
 				'renderType' => 'selectSingle',
@@ -130,7 +130,7 @@ return [
 		],
 		'map' => [
 			'exclude' => true,
-			'label' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_maplocation.map',
+			'label' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_mapcoordinate.map',
 			'config' => [
 				'type' => 'select',
 				'renderType' => 'selectSingle',

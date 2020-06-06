@@ -14,15 +14,15 @@ CREATE TABLE tx_ki_domain_model_map (
 CREATE TABLE tx_ki_domain_model_mapregion (
 
 	title varchar(255) DEFAULT '' NOT NULL,
-  locations int(11) unsigned DEFAULT '0',
+  coordinates int(11) unsigned DEFAULT '0',
 	map int(11) unsigned DEFAULT '0',
 
 );
 
 #
-# Table structure for table 'tx_ki_domain_model_maplocation'
+# Table structure for table 'tx_ki_domain_model_mapcoordinate'
 #
-CREATE TABLE tx_ki_domain_model_maplocation (
+CREATE TABLE tx_ki_domain_model_mapcoordinate (
 
 	region int(11) unsigned DEFAULT '0',
 	map int(11) unsigned DEFAULT '0',
@@ -48,14 +48,14 @@ CREATE TABLE tx_ki_domain_model_gamemapregion (
 
     origin int(11) unsigned DEFAULT '0',
     game   int(11) unsigned DEFAULT '0',
-		locations int(11) unsigned DEFAULT '0',
+		coordinates int(11) unsigned DEFAULT '0',
 
 );
 
 #
-# Table structure for table 'tx_ki_domain_model_gamemaplocation'
+# Table structure for table 'tx_ki_domain_model_gamemapcoordinate'
 #
-CREATE TABLE tx_ki_domain_model_gamemaplocation (
+CREATE TABLE tx_ki_domain_model_gamemapcoordinate (
 
     region int(11) unsigned DEFAULT '0',
     origin int(11) unsigned DEFAULT '0',

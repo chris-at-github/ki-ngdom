@@ -4,7 +4,7 @@ namespace Ps\Ki\Processor\GameCreator;
 
 use Ps\Ki\Domain\Model\Game;
 use Ps\Ki\Domain\Model\GameMapRegion;
-use Ps\Ki\Domain\Model\GameMapLocation;
+use Ps\Ki\Domain\Model\GameMapCoordinate;
 use Ps\Ki\Domain\Repository\GameRepository;
 use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
@@ -36,14 +36,14 @@ class MapCreator extends AbstractCreator {
 			$gameMapRegion = $this->objectManager->get(GameMapRegion::class);
 			$gameMapRegion->setOrigin($region);
 
-			/** @var \Ps\Ki\Domain\Model\MapLocation $location */
-			foreach($region->getLocations() as $location) {
+			/** @var \Ps\Ki\Domain\Model\MapCoordinate $coordinate */
+			foreach($region->getCoordinates() as $coordinate) {
 
-				/** @var \Ps\Ki\Domain\Model\GameMapLocation $gameMapLocation */
-				$gameMapLocation = $this->objectManager->get(GameMapLocation::class);
-				$gameMapLocation->setOrigin($location);
+				/** @var \Ps\Ki\Domain\Model\GameMapCoordinate $gameMapCoordinate */
+				$gameMapCoordinate = $this->objectManager->get(GameMapCoordinate::class);
+				$gameMapCoordinate->setOrigin($coordinate);
 
-				$gameMapRegion->addLocation($gameMapLocation);
+				$gameMapRegion->addCoordinate($gameMapCoordinate);
 			}
 
 			$game->addRegion($gameMapRegion);
