@@ -1,0 +1,27 @@
+page {
+	cssInline.10 >
+
+	includeCSS {
+		application >
+		kingdom = assets/css/kingdom.css
+	}
+
+	includeJSFooter {
+		application >
+		#		ai = assets/js/empire.js
+	}
+
+	10 {
+		templateRootPaths {
+			30 = EXT:ki/Resources/Private/Extensions/Xo/Templates/
+		}
+
+		layoutRootPaths {
+			30 = EXT:ki/Resources/Private/Extensions/Xo/Layouts/
+		}
+
+		partialRootPaths {
+			30 = EXT:ki/Resources/Private/Extensions/Xo/Partials//
+		}
+	}
+}

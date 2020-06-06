@@ -1,28 +1,23 @@
 {
-    "name": "ps/ai",
-    "type": "typo3-cms-extension",
-    "description": "",
-    "authors": [
-        {
-            "name": "Christian Pschorr",
-            "role": "Developer"
-        }
-    ],
-    "require": {
-        "typo3/cms-core": "^9.5"
-    },
-    "autoload": {
-        "psr-4": {
-            "Ps\\Ai\\": "Classes"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Ps\\Ai\\Tests\\": "Tests"
-        }
-    },
-    "replace": {
-        "ps/ai": "self.version",
-        "typo3-ter/ai": "self.version"
-    }
+	"name": "ps/ki",
+	"type": "typo3-cms-extension",
+	"description": "",
+	"authors": [
+		{
+			"name": "Christian Pschorr",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"typo3/cms-core": "^9.5"
+	},
+	"autoload": {
+		"psr-4": {
+			"Ps\\Ki\\": "Classes"
+		}
+	},
+	"replace": {
+		"ps/ki": "self.version",
+		"typo3-ter/ki": "self.version"
+	}
 }

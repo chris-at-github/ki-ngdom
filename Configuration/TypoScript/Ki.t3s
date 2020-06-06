@@ -1,15 +1,1 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:ki/Configuration/TypoScript/System/" extensions="t3s">
-
-page {
-	cssInline.10 >
-
-	includeCSS {
-		application >
-		kingdom = assets/css/kingdom.css
-	}
-
-	includeJSFooter {
-		application >
-#		ai = assets/js/empire.js
-	}
-}
