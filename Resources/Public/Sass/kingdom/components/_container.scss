@@ -1,8 +1,12 @@
 .container {
 	& {
 		padding: rem(15px);
-		border: 1px solid #ccc;
+		border: 2px solid #ccc;
 		background: #fff;
+	}
+
+	& + .container {
+		margin-top: rem(15px);
 	}
 
 	.container--header-title {

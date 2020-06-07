@@ -37,12 +37,20 @@
 	</f:section>
 
 	<f:section name="Listing">
-		<ul>
-			<f:for each="{games}" as="game">
-				<li>
-					<f:link.action action="playground" arguments="{game: game}">{game.title}</f:link.action>
-				</li>
-			</f:for>
-		</ul>
+		<div class="container">
+			<div class="container--header">
+				<div class="container--header-title">Save Games</div>
+			</div>
+
+			<div class="container--main">
+				<ul class="listing">
+					<f:for each="{games}" as="game">
+						<li class="listing--item">
+							<f:link.action action="playground" arguments="{game: game}" class="listing--item-title">{game.title}</f:link.action>
+						</li>
+					</f:for>
+				</ul>
+			</div>
+		</div>
 	</f:section>
 </html>
