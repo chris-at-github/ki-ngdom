@@ -17,8 +17,6 @@
 @import '../../../../xo/Resources/Public/Sass/xo/svg';
 @import '../../../../xo/Resources/Public/Sass/xo/grid';
 
-@import '../../../../xo/Resources/Public/Sass/xo/components/table';
-
 // ---------------------------------------------------------------------------------------------------------------------
 // Layout
 @import 'kingdom/layout/page';
@@ -28,3 +26,4 @@
 // Components
 @import 'kingdom/components/module';
 @import 'kingdom/components/container';
+@import 'kingdom/components/form';
