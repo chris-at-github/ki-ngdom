@@ -4,25 +4,31 @@
 	<f:section name="Main">
 		<div class="module">
 			<div class="row">
-				<div class="col-sx-12 col-sm-6">
+				<div class="col-sx-12 col-lg-6">
 					<f:render section="Map" arguments="{_all}" />
 				</div>
-				<div class="col-sx-12 col-sm-6">
-					<f:render section="Queue" arguments="{_all}" />
-				</div>
+
+				<f:comment>
+					<div class="col-sx-12 col-lg-6">
+						<f:render section="Queue" arguments="{_all}" />
+					</div>
+				</f:comment>
 			</div>
 		</div>
 	</f:section>
 
 	<f:section name="Map">
-		<div class="container">
+		<div class="container world-map">
 			<div class="container--header">
 				<div class="container--header-title">Regions</div>
 			</div>
 
 			<f:for each="{game.regions}" as="region">
-				<div class="container">
-					<header>{region.origin.title}</header>
+				<div class="world-map--region">
+					<div class="world-map--region-title">{region.origin.title}</div>
+					<div class="world-map--region-coordinates">
+
+					</div>
 				</div>
 			</f:for>
 		</div>

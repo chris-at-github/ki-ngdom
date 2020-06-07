@@ -1,0 +1,12 @@
+.world-map {
+	.world-map--region {
+		& {
+			margin: rem(15px 0 0 0);
+		}
+
+		.world-map--region-title {
+			font-weight: 700;
+			border-bottom: 1px solid #ccc;
+		}
+	}
+}
