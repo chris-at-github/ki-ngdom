@@ -3,6 +3,7 @@ return [
 	'ctrl' => [
 		'title' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_mapcoordinate',
 		'label' => 'region',
+		'label_userFunc' => \Ps\Ki\Service\TcaService::class . '->getTileTitle',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
@@ -21,10 +22,10 @@ return [
 		'iconfile' => 'EXT:ki/Resources/Public/Icons/tx_ki_domain_model_mapcoordinate.gif'
 	],
 	'interface' => [
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, region, map',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, region, map, x, y',
 	],
 	'types' => [
-		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, region, map, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, region, map, x, y, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
 	],
 	'columns' => [
 		'sys_language_uid' => [
@@ -138,6 +139,24 @@ return [
 				'minitems' => 0,
 				'maxitems' => 1,
 			],
+		],
+		'x' => [
+			'exclude' => true,
+			'label' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_mapcoordinate.x',
+			'config' => [
+				'type' => 'input',
+				'size' => 4,
+				'eval' => 'int,required'
+			]
+		],
+		'y' => [
+			'exclude' => true,
+			'label' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_mapcoordinate.y',
+			'config' => [
+				'type' => 'input',
+				'size' => 4,
+				'eval' => 'int,required'
+			]
 		],
 
 	],

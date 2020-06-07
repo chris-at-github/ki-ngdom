@@ -30,6 +30,22 @@ class MapCoordinate extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $map = null;
 
 	/**
+	 * x
+	 *
+	 * @var int
+	 * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
+	 */
+	protected $x = 0;
+
+	/**
+	 * y
+	 *
+	 * @var int
+	 * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
+	 */
+	protected $y = 0;
+
+	/**
 	 * Returns the region
 	 *
 	 * @return \Ps\Ki\Domain\Model\MapRegion $region
@@ -65,5 +81,43 @@ class MapCoordinate extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	public function setMap(\Ps\Ki\Domain\Model\Map $map) {
 		$this->map = $map;
+	}
+
+	/**
+	 * Returns the x
+	 *
+	 * @return int $x
+	 */
+	public function getX() {
+		return $this->x;
+	}
+
+	/**
+	 * Sets the x
+	 *
+	 * @param int $x
+	 * @return void
+	 */
+	public function setX($x) {
+		$this->x = $x;
+	}
+
+	/**
+	 * Returns the y
+	 *
+	 * @return int $y
+	 */
+	public function getY() {
+		return $this->y;
+	}
+
+	/**
+	 * Sets the y
+	 *
+	 * @param int $y
+	 * @return void
+	 */
+	public function setY($y) {
+		$this->y = $y;
 	}
 }

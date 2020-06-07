@@ -21,17 +21,23 @@
 			<trans-unit id="tx_ki_domain_model_mapregion.map">
 				<source>Map</source>
 			</trans-unit>
-			<trans-unit id="tx_ki_domain_model_mapregion.locations">
+			<trans-unit id="tx_ki_domain_model_mapregion.coordinates">
 				<source>Locations</source>
 			</trans-unit>
-			<trans-unit id="tx_ki_domain_model_maplocation">
+			<trans-unit id="tx_ki_domain_model_mapcoordinate">
 				<source>Map Location</source>
 			</trans-unit>
-			<trans-unit id="tx_ki_domain_model_maplocation.region">
+			<trans-unit id="tx_ki_domain_model_mapcoordinate.region">
 				<source>Region</source>
 			</trans-unit>
-			<trans-unit id="tx_ki_domain_model_maplocation.map">
+			<trans-unit id="tx_ki_domain_model_mapcoordinate.map">
 				<source>Map</source>
+			</trans-unit>
+			<trans-unit id="tx_ki_domain_model_mapcoordinate.x">
+				<source>X</source>
+			</trans-unit>
+			<trans-unit id="tx_ki_domain_model_mapcoordinate.y">
+				<source>Y</source>
 			</trans-unit>
 			<trans-unit id="tx_ki_frontend.name">
 				<source>Frontend</source>
@@ -63,16 +69,16 @@
 			<trans-unit id="tx_ki_domain_model_gamemapregion.game">
 				<source>Game</source>
 			</trans-unit>
-			<trans-unit id="tx_ki_domain_model_gamemapregion.locations">
+			<trans-unit id="tx_ki_domain_model_gamemapregion.coordinates">
 				<source>Locations</source>
 			</trans-unit>
-			<trans-unit id="tx_ki_domain_model_gamemaplocation">
+			<trans-unit id="tx_ki_domain_model_gamemapcoordinate">
 				<source>Game Map Location</source>
 			</trans-unit>
-			<trans-unit id="tx_ki_domain_model_gamemaplocation.region">
+			<trans-unit id="tx_ki_domain_model_gamemapcoordinate.region">
 				<source>Region</source>
 			</trans-unit>
-			<trans-unit id="tx_ki_domain_model_gamemaplocation.origin">
+			<trans-unit id="tx_ki_domain_model_gamemapcoordinate.origin">
 				<source>Origin</source>
 			</trans-unit>
 			<trans-unit id="tx_ki_domain_model_gameplayer">
