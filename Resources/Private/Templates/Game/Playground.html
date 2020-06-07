@@ -23,12 +23,13 @@
 				<div class="container--header-title">Regions</div>
 			</div>
 
-			<f:debug>{game.regions}</f:debug>
-
 			<f:for each="{game.regions}" as="region">
 				<div class="world-map--region">
 					<div class="world-map--region-title">{region.origin.title}</div>
 					<div class="world-map--region-coordinates">
+						<f:for each="{region.coordinates}" as="coordinate">
+							<div class="world-map--coordinate">{coordinate.origin.x} | {coordinate.origin.y}</div>
+						</f:for>
 					</div>
 				</div>
 			</f:for>
