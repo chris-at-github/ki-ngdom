@@ -6,7 +6,7 @@ use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 /***
  *
- * This file is part of the "Ai" Extension for TYPO3 CMS.
+ * This file is part of the "Ki" Extension for TYPO3 CMS.
  *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.

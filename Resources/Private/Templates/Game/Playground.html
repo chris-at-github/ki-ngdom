@@ -8,11 +8,9 @@
 					<f:render section="Map" arguments="{_all}" />
 				</div>
 
-				<f:comment>
-					<div class="col-sx-12 col-lg-6">
-						<f:render section="Queue" arguments="{_all}" />
-					</div>
-				</f:comment>
+				<div class="col-sx-12 col-lg-6">
+					<f:render section="Queue" arguments="{_all}" />
+				</div>
 			</div>
 		</div>
 	</f:section>
@@ -30,7 +28,7 @@
 						<f:for each="{region.coordinates}" as="coordinate">
 							<div class="world-map--coordinate">
 								<div class="row">
-									<div class="col-sm-3">
+									<div class="col-sx-12 col-sm-3">
 										{coordinate.origin.x} | {coordinate.origin.y}
 									</div>
 								</div>
@@ -48,49 +46,51 @@
 				<div class="container--header-title">Queue</div>
 			</div>
 
-			<div class="container">
-				<f:form controller="Queue" action="wizard">
-					<div>
-						<f:form.hidden name="game" value="{game}" />
-					</div>
+			<div class="container--main">
+				<div class="container">
+					<f:form controller="Queue" action="wizard" class="form--layout-0">
+						<div>
+							<f:form.hidden name="game" value="{game}" />
+						</div>
 
-					<div class="form-item">
-						<label class="form-label" for="queue-wizard-processor">Queue Processor</label>
-						<f:form.select name="processor" class="form-field" id="queue-wizard-processor">
-							<f:for each="{queueProcessors}" as="queueProcessor">
-								<f:form.select.option value="{queueProcessor}">{queueProcessor}</f:form.select.option>
-							</f:for>
-						</f:form.select>
-					</div>
+						<div class="form-item">
+							<label class="form-label" for="queue-wizard-processor">Queue Processor</label>
+							<f:form.select name="processor" class="form-field" id="queue-wizard-processor">
+								<f:for each="{queueProcessors}" as="queueProcessor">
+									<f:form.select.option value="{queueProcessor}">{queueProcessor}</f:form.select.option>
+								</f:for>
+							</f:form.select>
+						</div>
 
-					<div class="form-action">
-						<button class="form-button" type="submit">Create</button>
-					</div>
-				</f:form>
-			</div>
-
-			<div class="container">
-				<div>
-					<f:link.action controller="Queue" action="process" arguments="{game: game}">Process</f:link.action>
+						<div class="form-action">
+							<button class="button" type="submit">Create</button>
+						</div>
+					</f:form>
 				</div>
 
-				<table class="table--layout-0">
-					<thead>
-						<tr>
-							<th>Processor</th>
-							<th>Expiry time</th>
-						</tr>
-					</thead>
-					<tbody>
-						<f:for each="{queue}" as="item">
-							<tr>
-								<td>{item.processor}</td>
-								<td>{item.expiryDate}</td>
-							</tr>
-						</f:for>
-					</tbody>
-				</table>
+				<div class="container">
+					<div>
+						<f:link.action controller="Queue" action="process" arguments="{game: game}">Process</f:link.action>
+					</div>
 
+					<table class="table--layout-0">
+						<thead>
+							<tr>
+								<th>Processor</th>
+								<th>Expiry time</th>
+							</tr>
+						</thead>
+						<tbody>
+							<f:for each="{queue}" as="item">
+								<tr>
+									<td>{item.processor}</td>
+									<td>{item.expiryDate}</td>
+								</tr>
+							</f:for>
+						</tbody>
+					</table>
+
+				</div>
 			</div>
 		</div>
 	</f:section>
