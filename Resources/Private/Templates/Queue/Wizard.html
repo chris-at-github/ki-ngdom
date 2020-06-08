@@ -2,18 +2,26 @@
 	<f:layout name="Default" />
 	<f:section name="Main">
 
-		<f:form action="create">
-			<div>
-				<f:form.hidden value="{game}" name="game" />
-				<f:form.hidden value="{processor}" name="processor" />
+		<div class="module">
+			<div class="module--header">
+				<div class="module--header-title">Wizard</div>
 			</div>
 
-			<f:render partial="Queue/Processor/{partial}" section="Main" arguments="{_all}" />
+			<div class="container">
+				<f:form action="create" class="form--layout-0">
+					<div>
+						<f:form.hidden value="{game}" name="game" />
+						<f:form.hidden value="{processor}" name="processor" />
+					</div>
 
-			<div class="form-action">
-				<button class="form-button" type="submit">Create</button>
+					<f:render partial="Queue/Processor/{partial}" section="Main" arguments="{_all}" />
+
+					<div class="form-action">
+						<button class="form-button" type="submit">Create</button>
+					</div>
+				</f:form>
 			</div>
-		</f:form>
+		</div>
 
 	</f:section>
 </html>
