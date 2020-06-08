@@ -9,4 +9,14 @@
 			border-bottom: 1px solid #ccc;
 		}
 	}
+
+	.world-map--coordinate {
+		& {
+			padding: rem(3px 0);
+		}
+
+		& + .world-map--coordinate {
+			border-top: 1px solid #ddd;
+		}
+	}
 }

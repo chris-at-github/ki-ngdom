@@ -28,7 +28,13 @@
 					<div class="world-map--region-title">{region.origin.title}</div>
 					<div class="world-map--region-coordinates">
 						<f:for each="{region.coordinates}" as="coordinate">
-							<div class="world-map--coordinate">{coordinate.origin.x} | {coordinate.origin.y}</div>
+							<div class="world-map--coordinate">
+								<div class="row">
+									<div class="col-sm-3">
+										{coordinate.origin.x} | {coordinate.origin.y}
+									</div>
+								</div>
+							</div>
 						</f:for>
 					</div>
 				</div>
