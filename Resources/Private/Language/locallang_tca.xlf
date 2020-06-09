@@ -102,6 +102,15 @@
 			<trans-unit id="tx_ki_domain_model_queue.game">
 				<source>Game</source>
 			</trans-unit>
+			<trans-unit id="tx_ki_domain_model_settlement">
+				<source>Settlement</source>
+			</trans-unit>
+			<trans-unit id="tx_ki_domain_model_settlement.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_ki_domain_model_settlement.coordinate">
+				<source>Coordinate</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
