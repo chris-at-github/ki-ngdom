@@ -1,0 +1,21 @@
+config.tx_extbase {
+	persistence {
+		classes {
+#
+#			Ps\Ki\Domain\Model\Settlement {
+#				subclasses {
+#					Tx_Kix_SettlementDefense = Ps\Kix\Domain\Model\SettlementDefense
+#
+#				}
+#			}
+
+			Ps\Kix\Domain\Model\SettlementDefense {
+				mapping {
+					tableName = tx_ki_domain_model_settlement
+					recordType = Ps\Kix\Domain\Model\SettlementDefense
+				}
+			}
+
+		}
+	}
+}

@@ -1,1 +1,2 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:ki/Configuration/TypoScript/System/" extensions="t3s">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ki/Configuration/TypoScript/Objects/" extensions="t3s">

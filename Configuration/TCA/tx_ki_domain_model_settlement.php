@@ -3,6 +3,7 @@ return [
 	'ctrl' => [
 		'title' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_settlement',
 		'label' => 'title',
+		'type' => 'record_type',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
@@ -24,7 +25,13 @@ return [
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, coordinate',
 	],
 	'types' => [
-		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, coordinate, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+		'0' => [
+			'showitem' => 'record_type, title'
+		],
+		'Ps\Kix\Domain\Model\SettlementDefense' => [
+			'showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, record_type, title, coordinate, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime\''
+		],
+		//'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, coordinate, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
 	],
 	'columns' => [
 		'sys_language_uid' => [
@@ -116,7 +123,20 @@ return [
 				]
 			],
 		],
-
+		'record_type' => [
+			'exclude' => true,
+			'label' => 'Type',
+			'config' => [
+				'type' => 'select',
+				'items' => [
+					['', ''],
+					['Defense', 'Ps\Kix\Domain\Model\SettlementDefense'],
+				],
+				'default' => '',
+				'minitems' => 1,
+				'eval' => 'required'
+			],
+		],
 		'title' => [
 			'exclude' => true,
 			'label' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_settlement.title',

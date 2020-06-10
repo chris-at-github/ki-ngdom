@@ -93,5 +93,6 @@ CREATE TABLE tx_ki_domain_model_settlement (
 
 	title varchar(255) DEFAULT '' NOT NULL,
 	coordinate int(11) unsigned DEFAULT '0',
+	record_type varchar(255) DEFAULT '' NOT NULL,
 
 );
