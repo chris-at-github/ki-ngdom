@@ -130,7 +130,7 @@ return [
 				'type' => 'select',
 				'items' => [
 					['', ''],
-					['Defense', 'Ps\Kix\Domain\Model\SettlementDefense'],
+					['Defense', 'Ps\Ki\Domain\Model\SettlementDefense'],
 				],
 				'default' => '',
 				'minitems' => 1,
