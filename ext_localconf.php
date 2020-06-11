@@ -8,12 +8,14 @@ call_user_func(function() {
 		[
 			'Game' => 'index, create, playground',
 			'Queue' => 'wizard, create, process',
+			'Playground' => 'index, settlement',
 		],
 
 		// non-cacheable actions
 		[
 			'Game' => 'index, create, playground',
 			'Queue' => 'wizard, create, process',
+			'Playground' => 'index, settlement',
 		]
 	);
 
