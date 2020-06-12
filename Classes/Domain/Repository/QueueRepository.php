@@ -1,6 +1,8 @@
 <?php
 namespace Ps\Ki\Domain\Repository;
 
+use TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
+
 /***
  *
  * This file is part of the "Ai" Extension for TYPO3 CMS.
