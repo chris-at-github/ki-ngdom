@@ -2,6 +2,8 @@
 
 namespace Ps\Ki\Domain\Model;
 
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+
 /***
  *
  * This file is part of the "Kingdom" Extension for TYPO3 CMS.
@@ -16,7 +18,7 @@ namespace Ps\Ki\Domain\Model;
 /**
  * Settlement
  */
-class Settlement extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+class Settlement extends AbstractEntity {
 
 	/**
 	 * title
@@ -25,6 +27,13 @@ class Settlement extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
 	 */
 	protected $title = '';
+
+	/**
+	 * game
+	 *
+	 * @var \Ps\Ki\Domain\Model\Game
+	 */
+	protected $game = null;
 
 	/**
 	 * coordinate
@@ -50,6 +59,25 @@ class Settlement extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	public function setTitle($title) {
 		$this->title = $title;
+	}
+
+	/**
+	 * Returns the game
+	 *
+	 * @return \Ps\Ki\Domain\Model\Game $game
+	 */
+	public function getGame() {
+		return $this->game;
+	}
+
+	/**
+	 * Sets the game
+	 *
+	 * @param \Ps\Ki\Domain\Model\Game $game
+	 * @return void
+	 */
+	public function setGame(\Ps\Ki\Domain\Model\Game $game) {
+		$this->game = $game;
 	}
 
 	/**
