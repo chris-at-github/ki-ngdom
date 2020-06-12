@@ -22,16 +22,21 @@ return [
 		'iconfile' => 'EXT:ki/Resources/Public/Icons/tx_ki_domain_model_settlement.gif'
 	],
 	'interface' => [
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, coordinate',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, game, coordinate',
 	],
 	'types' => [
 		'0' => [
 			'showitem' => 'record_type, title'
 		],
-		'Ps\Kix\Domain\Model\SettlementDefense' => [
-			'showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, record_type, title, coordinate, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime\''
+		'Ps\Ki\Domain\Model\SettlementTown' => [
+			'showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, record_type, title, game, coordinate, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime\''
 		],
-		//'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, coordinate, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+		'Ps\Ki\Domain\Model\SettlementOutpost' => [
+			'showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, record_type, title, game, coordinate, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime\''
+		],
+		'Ps\Ki\Domain\Model\SettlementDefense' => [
+			'showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, record_type, title, game, coordinate, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime\''
+		],
 	],
 	'columns' => [
 		'sys_language_uid' => [
@@ -146,6 +151,20 @@ return [
 				'type' => 'input',
 				'size' => 30,
 				'eval' => 'trim,required'
+			],
+		],
+		'game' => [
+			'exclude' => true,
+			'label' => 'LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_settlement.game',
+			'config' => [
+				'type' => 'group',
+				'internal_type' => 'db',
+				'allowed' => 'tx_ki_domain_model_game',
+				'maxitems' => 1,
+				'minitems' => 0,
+				'size' => 1,
+				'default' => 0,
+				'hideSuggest' => 1,
 			],
 		],
 		'coordinate' => [

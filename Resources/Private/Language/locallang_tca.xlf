@@ -108,6 +108,21 @@
 			<trans-unit id="tx_ki_domain_model_settlement.title">
 				<source>Title</source>
 			</trans-unit>
+			<trans-unit id="tx_ki_domain_model_settlement.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_ki_domain_model_settlement.type.town">
+				<source>Town</source>
+			</trans-unit>
+			<trans-unit id="tx_ki_domain_model_settlement.type.outpost">
+				<source>Outpost</source>
+			</trans-unit>
+			<trans-unit id="tx_ki_domain_model_settlement.type.defense">
+				<source>Defense</source>
+			</trans-unit>
+			<trans-unit id="tx_ki_domain_model_settlement.game">
+				<source>Game</source>
+			</trans-unit>
 			<trans-unit id="tx_ki_domain_model_settlement.coordinate">
 				<source>Coordinate</source>
 			</trans-unit>
