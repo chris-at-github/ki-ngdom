@@ -130,7 +130,9 @@ return [
 				'type' => 'select',
 				'items' => [
 					['', ''],
-					['Defense', 'Ps\Ki\Domain\Model\SettlementDefense'],
+					['LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_settlement.type.town', 'Ps\Ki\Domain\Model\SettlementTown'],
+					['LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_settlement.type.outpost', 'Ps\Ki\Domain\Model\SettlementOutpost'],
+					['LLL:EXT:ki/Resources/Private/Language/locallang_tca.xlf:tx_ki_domain_model_settlement.type.defense', 'Ps\Ki\Domain\Model\SettlementDefense'],
 				],
 				'default' => '',
 				'minitems' => 1,

@@ -4,7 +4,23 @@ plugin.tx_ki {
 
 			Ps\Ki\Domain\Model\Settlement {
 				subclasses {
+					Ps\Ki\Domain\Model\SettlementTown = Ps\Ki\Domain\Model\SettlementTown
+					Ps\Ki\Domain\Model\SettlementOutpost = Ps\Ki\Domain\Model\SettlementOutpost
 					Ps\Ki\Domain\Model\SettlementDefense = Ps\Ki\Domain\Model\SettlementDefense
+				}
+			}
+
+			Ps\Ki\Domain\Model\SettlementTown {
+				mapping {
+					tableName = tx_ki_domain_model_settlement
+					recordType = Ps\Ki\Domain\Model\SettlementTown
+				}
+			}
+
+			Ps\Ki\Domain\Model\SettlementOutpost {
+				mapping {
+					tableName = tx_ki_domain_model_settlement
+					recordType = Ps\Ki\Domain\Model\SettlementOutpost
 				}
 			}
 
